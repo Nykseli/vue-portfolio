@@ -33,11 +33,39 @@
         </v-row>
         <v-row align="center">
           <v-col align="center">
-            <div class="home-scren-arrow">
-              <div class="arrow-animation">
+            <div class="home-screen-arrow">
+              <div @click="scrollToHomeAbout" class="arrow-animation">
                 <v-img src="images/up-arrow-svg-blue.svg"></v-img>
               </div>
             </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-img>
+    <v-img
+      class="full-img home-about-scroll"
+      position="right"
+      src="images/Miika_Full-9-optim.jpg"
+    >
+      <v-container fill-height flud>
+        <v-row align="center">
+          <v-col class="intro-text-col" algin="center" lg="5" offset-lg="6">
+            <!-- TODO: Multi lang -->
+            <p>Hello there!</p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Adipiscing bibendum est ultricies integer quis. Amet nulla
+              facilisi morbi tempus iaculis urna id. Ante in nibh mauris cursus
+              mattis molestie. In ornare quam viverra orci sagittis eu volutpat.
+              Libero nunc consequat interdum varius. Fermentum iaculis eu non
+              diam phasellus vestibulum lorem sed risus. Orci sagittis eu
+              volutpat odio facilisis mauris sit amet. Sit amet volutpat
+              consequat mauris. Quam viverra orci sagittis eu volutpat odio
+              facilisis mauris sit. Lobortis mattis aliquam faucibus purus in
+              massa tempor nec. Aliquam etiam erat velit scelerisque. Hac
+              habitasse platea dictumst quisque.
+            </p>
           </v-col>
         </v-row>
       </v-container>
@@ -65,6 +93,15 @@ export default class Home extends Vue {
     "Full Stack Developer",
     "Code enthusiast"
   ];
+
+  scrollToHomeAbout() {
+    const el = this.$el.getElementsByClassName("home-about-scroll")[0];
+
+    if (el) {
+      // Use el.scrollIntoView() to instantly scroll to the element
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 }
 </script>
 
@@ -109,11 +146,12 @@ export default class Home extends Vue {
   display: none;
 }
 
-.home-scren-arrow {
+.home-screen-arrow {
   height: 15vh;
   width: 15vh;
   opacity: 0.85;
   position: relative;
+  cursor: pointer;
 }
 
 .arrow-animation {
@@ -130,6 +168,16 @@ export default class Home extends Vue {
   50% {
     transform: translateY(-50px);
   }
+}
+
+.intro-text-col {
+  margin: 5vw;
+}
+
+p {
+  /* TODO: should the color be based on the theme or always white? */
+  color: #f5f5f5;
+  font-size: 20px;
 }
 
 .container {
