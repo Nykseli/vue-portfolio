@@ -35,13 +35,11 @@
 
     <v-app-bar app clipped-left>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title class="primary--text">Application</v-toolbar-title>
+      <v-toolbar-title class="primary--text">Portfolio</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn large icon dark>
-          <v-icon @click="changeTheme()" size="30" color="primary">
-            {{ lightIcon }}
-          </v-icon>
+        <v-btn @click="changeTheme()" large icon dark>
+          <v-icon size="30" color="primary">{{ lightIcon }}</v-icon>
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
@@ -53,10 +51,6 @@
         </v-layout>
       </v-container>
     </v-main>
-
-    <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
@@ -66,7 +60,7 @@ import { Component } from "vue-property-decorator";
 
 @Component
 export default class App extends Vue {
-  public drawer = null;
+  public drawer = false;
   public lightIcon = "mdi-lightbulb-on-outline";
 
   changeTheme() {
@@ -74,10 +68,13 @@ export default class App extends Vue {
     this.$vuetify.theme.dark = dark;
     this.lightIcon = dark ? "mdi-lightbulb " : "mdi-lightbulb-on-outline";
   }
-
-  // light on
-  // mdi-lightbulb-on-outline
-  // light off
-  // mdi-lightbulb
 }
 </script>
+
+<style scoped>
+.v-main {
+  /* Disable v-main padding so the window doesn't have 64 extra
+     pixels in height for no apparent reason */
+  padding: 0 !important;
+}
+</style>

@@ -5,7 +5,8 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
   theme: {
-    dark: true,
+    // Application UI design is mainly for the light theme
+    dark: false,
     themes: {
       dark: {
         primary: "#71b5ff",
