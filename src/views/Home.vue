@@ -45,7 +45,7 @@
     <v-img
       class="full-img home-about-scroll"
       position="right"
-      src="images/Miika_Full-9-optim.jpg"
+      src="images/miika-optim.jpg"
     >
       <v-container fill-height flud>
         <v-row align="center">
@@ -105,6 +105,31 @@ export default class Home extends Vue {
 }
 </script>
 
+<style>
+/* Vue typer text.
+   This doesn't work in scoped style */
+.vue-typer .typed {
+  color: #517397 !important;
+  font-size: 4vh !important;
+}
+
+.vue-typer-container {
+  /* Match the height with vue-typer text height
+     This makes sure that the div size is never 0
+     even when there are no characters to be shown */
+  height: 4vh;
+}
+
+/* "Hack" to hide the caret */
+.vue-typer .caret {
+  display: none;
+}
+
+.intro-text-col {
+  margin: 5vw;
+}
+</style>
+
 <style scope>
 .full-img {
   width: 100vw;
@@ -121,29 +146,6 @@ export default class Home extends Vue {
 .home-info h1 {
   font-size: 10vh;
   line-height: 1.1;
-}
-
-.home-info-container {
-  padding: 2vh;
-  background-color: #5173976e;
-}
-
-.vue-typer-container {
-  /* Match the height with vue-typer text height
-     This makes sure that the div size is never 0
-     even when there are no characters to be shown */
-  height: 4vh;
-}
-
-/* Vue typer text */
-.vue-typer > span > span {
-  color: #517397 !important;
-  font-size: 4vh;
-}
-
-/* "Hack" to hide the caret */
-.vue-typer .caret {
-  display: none;
 }
 
 .home-screen-arrow {
@@ -168,10 +170,6 @@ export default class Home extends Vue {
   50% {
     transform: translateY(-50px);
   }
-}
-
-.intro-text-col {
-  margin: 5vw;
 }
 
 p {
