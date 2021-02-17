@@ -15,7 +15,7 @@ import GifInfo from "@/components/GifInfo.vue";
     GifInfo
   }
 })
-export default class Experience extends Vue {
+export default class Hobbies extends Vue {
   // TODO: i18n
   // TODO: actual text
   public title = "HOBBIES";
