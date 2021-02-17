@@ -1,8 +1,8 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" app clipped>
+    <v-navigation-drawer disable-resize-watcher v-model="drawer" app clipped>
       <v-list dense>
-        <v-list-item link>
+        <v-list-item link @click="$router.push('/')">
           <v-list-item-action>
             <v-icon color="secondary">mdi-view-dashboard</v-icon>
           </v-list-item-action>
@@ -10,13 +10,13 @@
             <v-list-item-title class="primary--text">Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link @click="$router.push('/experience')">
           <v-list-item-action>
             <v-icon color="secondary">mdi-cog</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="primary--text">
-              Data View
+              Experience
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -76,5 +76,10 @@ export default class App extends Vue {
   /* Disable v-main padding so the window doesn't have 64 extra
      pixels in height for no apparent reason */
   padding: 0 !important;
+}
+
+.container {
+  /* Override the vuetify container to avoid the weird full page scrolling */
+  padding: 0px !important;
 }
 </style>
