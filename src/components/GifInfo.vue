@@ -42,7 +42,6 @@ export default class GifInfo extends Vue {
 }
 
 .gifinfo-scroll-card {
-  height: 70vh;
   box-shadow: none !important;
 }
 
@@ -54,7 +53,8 @@ export default class GifInfo extends Vue {
 /* 600px is the sm grid brekpoint */
 @media (min-width: 600px) {
   .gifinfo-scroll-card {
-    overflow-y: scroll !important;
+    height: 70vh;
+    overflow-y: auto !important;
   }
 
   .gifinfo-text {
@@ -71,6 +71,8 @@ export default class GifInfo extends Vue {
 
 @media (max-width: 599px) {
   .gifinfo-scroll-card {
+    height: 100%;
+    max-height: 70vh;
     overflow-y: visible !important;
   }
 
