@@ -20,13 +20,13 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link @click="$router.push('/projects')">
           <v-list-item-action>
             <v-icon color="secondary">mdi-api</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="primary--text">
-              Api View
+              Projects
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
