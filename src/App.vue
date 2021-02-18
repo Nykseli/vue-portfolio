@@ -40,6 +40,16 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item link @click="$router.push('/skills')">
+          <v-list-item-action>
+            <v-icon color="secondary">mdi-api</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title class="primary--text">
+              Skills
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
