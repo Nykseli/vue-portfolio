@@ -7,7 +7,9 @@
             <v-icon color="secondary">mdi-view-dashboard</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="primary--text">Home</v-list-item-title>
+            <v-list-item-title class="primary--text">
+              {{ this.$vuetify.lang.t("$vuetify.navigation.frontPage") }}
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link @click="$router.push('/experience')">
@@ -16,7 +18,7 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="primary--text">
-              Experience
+              {{ this.$vuetify.lang.t("$vuetify.navigation.experience") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -26,7 +28,7 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="primary--text">
-              Projects
+              {{ this.$vuetify.lang.t("$vuetify.navigation.projects") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -36,7 +38,7 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="primary--text">
-              Hobbies
+              {{ this.$vuetify.lang.t("$vuetify.navigation.hobbies") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -46,7 +48,7 @@
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="primary--text">
-              Skills
+              {{ this.$vuetify.lang.t("$vuetify.navigation.skills") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -57,6 +59,16 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="primary--text">Portfolio</v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn class="primary--text" @click="changeLang('fi')" icon x-large>
+          FI
+        </v-btn>
+      </v-toolbar-items>
+      <v-toolbar-items>
+        <v-btn class="primary--text" @click="changeLang('en')" icon x-large>
+          EN
+        </v-btn>
+      </v-toolbar-items>
       <v-toolbar-items>
         <v-btn @click="changeTheme()" large icon dark>
           <v-icon size="30" color="primary">{{ lightIcon }}</v-icon>
@@ -87,6 +99,10 @@ export default class App extends Vue {
     const dark = !this.$vuetify.theme.dark;
     this.$vuetify.theme.dark = dark;
     this.lightIcon = dark ? "mdi-lightbulb " : "mdi-lightbulb-on-outline";
+  }
+
+  changeLang(langCode: string) {
+    this.$vuetify.lang.current = langCode;
   }
 }
 </script>

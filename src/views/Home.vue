@@ -86,13 +86,14 @@ const VueTyper = require("vue-typer").VueTyper;
   }
 })
 export default class Home extends Vue {
-  // TODO: is these good descriptions?
-  // TODO: multilang support
-  public typerList = [
-    "Software Engineer",
-    "Full Stack Developer",
-    "Code enthusiast"
-  ];
+  // get means that the values are computed i.e. updated lang.current is changed
+  get typerList() {
+    return [
+      this.$vuetify.lang.t("$vuetify.home.typerInfo1"),
+      this.$vuetify.lang.t("$vuetify.home.typerInfo2"),
+      this.$vuetify.lang.t("$vuetify.home.typerInfo3")
+    ];
+  }
 
   scrollToHomeAbout() {
     const el = this.$el.getElementsByClassName("home-about-scroll")[0];

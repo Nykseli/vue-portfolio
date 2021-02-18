@@ -1,6 +1,9 @@
 import Vue from "vue";
 import Vuetify from "vuetify/lib/framework";
 
+import en from "@/locale/en";
+import fi from "@/locale/fi";
+
 Vue.use(Vuetify);
 
 export default new Vuetify({
@@ -27,5 +30,9 @@ export default new Vuetify({
         error: "#529cff"
       }
     }
+  },
+  lang: {
+    locales: { fi, en },
+    current: "en"
   }
 });
