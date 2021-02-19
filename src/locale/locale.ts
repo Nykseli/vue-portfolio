@@ -7,6 +7,10 @@ interface HomeLocale extends VuetifyLocale {
   typerInfo1: string;
   typerInfo2: string;
   typerInfo3: string;
+  description1: string;
+  description2: string;
+  description3: string;
+  descriptionGreeting: string;
 }
 
 /**

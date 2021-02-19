@@ -50,22 +50,13 @@
       <v-container fill-height flud>
         <v-row align="center">
           <v-col class="intro-text-col" algin="center" lg="5" offset-lg="6">
-            <!-- TODO: Multi lang -->
-            <p>Hello there!</p>
+            <!-- TODO: Make this text easier to read -->
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Adipiscing bibendum est ultricies integer quis. Amet nulla
-              facilisi morbi tempus iaculis urna id. Ante in nibh mauris cursus
-              mattis molestie. In ornare quam viverra orci sagittis eu volutpat.
-              Libero nunc consequat interdum varius. Fermentum iaculis eu non
-              diam phasellus vestibulum lorem sed risus. Orci sagittis eu
-              volutpat odio facilisis mauris sit amet. Sit amet volutpat
-              consequat mauris. Quam viverra orci sagittis eu volutpat odio
-              facilisis mauris sit. Lobortis mattis aliquam faucibus purus in
-              massa tempor nec. Aliquam etiam erat velit scelerisque. Hac
-              habitasse platea dictumst quisque.
+              {{ this.$vuetify.lang.t("$vuetify.home.descriptionGreeting") }}
             </p>
+            <p>{{ this.$vuetify.lang.t("$vuetify.home.description1") }}</p>
+            <p>{{ this.$vuetify.lang.t("$vuetify.home.description2") }}</p>
+            <p>{{ this.$vuetify.lang.t("$vuetify.home.description3") }}</p>
           </v-col>
         </v-row>
       </v-container>
@@ -177,6 +168,8 @@ p {
   /* TODO: should the color be based on the theme or always white? */
   color: #f5f5f5;
   font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 10px !important;
 }
 
 .container {
