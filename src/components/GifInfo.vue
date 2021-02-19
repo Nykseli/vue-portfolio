@@ -8,7 +8,7 @@
         <v-img class="animated-gif" :src="gifPath" />
       </v-col>
       <v-col class="gifinfo-text primary--text" align="center" sm="6">
-        <v-card class="gifinfo-scroll-card">
+        <v-card class="gifinfo-scroll-card" :class="centered">
           <!-- The layout is injected to replace to slot -->
           <slot></slot>
         </v-card>
@@ -24,6 +24,11 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 export default class GifInfo extends Vue {
   @Prop({ required: true }) private title!: string;
   @Prop({ required: true }) private gifPath!: string;
+  @Prop({ required: false }) private centeredSlot?: boolean;
+
+  get centered() {
+    return this.centeredSlot ? "centered-slot" : "";
+  }
 }
 </script>
 
@@ -43,6 +48,11 @@ export default class GifInfo extends Vue {
 
 .gifinfo-scroll-card {
   box-shadow: none !important;
+}
+
+.centered-slot {
+  align-items: center;
+  display: grid;
 }
 
 .gifinfo-main-header {

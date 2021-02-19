@@ -18,6 +18,12 @@ const fiLocale = genLocale({
     description:
       "Opiskelen jatkuvasti uusia teknologioita ja kirjastoja. Tässä lista teknologioista joista on matkan varrella kertynyt enemmän tai vähemmän kokemusta!"
   },
+  hobbies: {
+    description1:
+      "Uusien teknologioiden oppimisen lisäksi tykkään käyttää vapaa-aikani soitten ja kuunnellen musiikkia. Keikoilla käynti on yksi lempi puuhistani joten toivon että pääsen pian katsomaan keikkoja!",
+    description2:
+      "Tykkään käydä myös taidemuseoissa ja nauttia maalaustaiteesta. Olenkin viimeaikoina opetellut piirtämään ja animoimaan siinä toivottossa että se parantaisi minun graaffisen suunnittelun taitoja. Sivuilla näkyvä robotti onkin minun piirtämä ja animoima!"
+  },
   navigation: {
     skills: "Osaaminen",
     hobbies: "Harrastukset",

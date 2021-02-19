@@ -1,7 +1,16 @@
 <template>
-  <gif-info :title="title" gifPath="/images/music-WIP1.gif">
+  <gif-info
+    :title="title"
+    gifPath="/images/music-WIP1.gif"
+    :centeredSlot="true"
+  >
     <div class="info-hobby-item">
-      <p class="primary--text">{{ text }}</p>
+      <p class="primary--text">
+        {{ this.$vuetify.lang.t("$vuetify.hobbies.description1") }}
+      </p>
+      <p class="primary--text">
+        {{ this.$vuetify.lang.t("$vuetify.hobbies.description2") }}
+      </p>
     </div>
   </gif-info>
 </template>
@@ -16,11 +25,9 @@ import GifInfo from "@/components/GifInfo.vue";
   }
 })
 export default class Hobbies extends Vue {
-  // TODO: i18n
-  // TODO: actual text
-  public title = "HOBBIES";
-  public text =
-    "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor";
+  get title() {
+    return this.$vuetify.lang.t("$vuetify.navigation.hobbies").toUpperCase();
+  }
 }
 </script>
 
@@ -30,14 +37,14 @@ export default class Hobbies extends Vue {
 }
 
 .info-hobby-item > p {
-  margin-top: 50%;
+  margin-top: 0;
   font-size: 22px;
 }
 
 /* See breakpoints from components/GifInfo.vue */
 @media (min-width: 600px) {
   .info-hobby-item > p {
-    margin-top: 50%;
+    margin-top: 0;
   }
 }
 

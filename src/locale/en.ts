@@ -18,6 +18,12 @@ const enLocale = genLocale({
     description:
       "I'm always learning new technologies and frameworks. Here is a list of some of the technologies I have learned along the way."
   },
+  hobbies: {
+    description1:
+      "Along with getting familiar with new technologies I like to spend my free time on playing and listening to music. Going to conserts is one of my favorite pass time activity so I hope I get to do that again soon!",
+    description2:
+      "I also like going to art museums to enjoy art. Lately I've been learning how to draw and animate in the hopes that it will improve my graphical design skills. The animated robot on my website is drawn and animated by me!"
+  },
   navigation: {
     skills: "Skills",
     hobbies: "Hobbies",
