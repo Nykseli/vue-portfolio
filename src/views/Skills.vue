@@ -1,13 +1,16 @@
 <template>
   <gif-info :title="title" gifPath="/images/music-WIP1.gif">
     <div class="info-skill-item">
-      <p class="primary--text">{{ description }}</p>
-      <v-col sm="12" align="middle" justify="middle">
-        <v-row align="middle" justify="middle">
+      <p class="primary--text">
+        {{ this.$vuetify.lang.t("$vuetify.skills.description") }}
+      </p>
+      <v-col sm="12" align="center" justify="center">
+        <v-row align="center" justify="center">
           <v-col v-for="(item, index) in technologies" :key="index" cols="6">
-            <p class="primary--text iline">
-              <i :class="item.icon" class="dev-icon iline"></i>
-              {{ item.name }}
+            <p class="primary--text technologies">
+              <i :class="item.icon" class="dev-icon">
+                <p class="primary--text">{{ item.name }}</p>
+              </i>
             </p>
           </v-col>
         </v-row>
@@ -26,55 +29,94 @@ import GifInfo from "@/components/GifInfo.vue";
   }
 })
 export default class Skills extends Vue {
-  // TODO: i18n
-  // TODO: actual short description of my skills
-  public title = "SKILLS";
-  public description =
-    "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor";
-  //TODO: an actual list of techologies
-  // Search from https://devicon.dev/
+  //TODO: Should these be in order of relevance?
+  // Icon names can be found in https://devicon.dev/
   private technologies = [
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "Android",
+      icon: "devicon-android-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "Bash",
+      icon: "devicon-bash-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "C",
+      icon: "devicon-c-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "C++",
+      icon: "devicon-cplusplus-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "Css",
+      icon: "devicon-css3-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "Flutter",
+      icon: "devicon-flutter-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "Git",
+      icon: "devicon-git-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "Go",
+      icon: "devicon-go-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "Html",
+      icon: "devicon-html5-plain"
     },
     {
-      name: "Javascript",
-      icon: "devicon-aftereffects-plain"
+      name: "Java",
+      icon: "devicon-java-plain"
+    },
+    {
+      name: "JavaScript",
+      icon: "devicon-javascript-plain"
+    },
+    {
+      name: "Kotlin",
+      icon: "devicon-kotlin-plain"
+    },
+    {
+      name: "Linux",
+      icon: "devicon-linux-plain"
+    },
+    {
+      name: "Mysql",
+      icon: "devicon-mysql-plain"
+    },
+    {
+      name: "Php",
+      icon: "devicon-php-plain"
+    },
+    {
+      name: "Python",
+      icon: "devicon-python-plain"
+    },
+    {
+      name: "ReactJs",
+      icon: "devicon-react-plain"
+    },
+    {
+      name: "Rust",
+      icon: "devicon-rust-plain"
+    },
+    {
+      name: "TypeScript",
+      icon: "devicon-typescript-plain"
+    },
+    {
+      name: "VueJs",
+      icon: "devicon-vuejs-plain"
     }
   ];
+
+  get title() {
+    return this.$vuetify.lang.t("$vuetify.navigation.skills").toUpperCase();
+  }
 }
 </script>
 
@@ -87,7 +129,11 @@ export default class Skills extends Vue {
   font-size: 35px;
 }
 
-.iline {
-  display: inline;
+.col-6 {
+  flex: 0 !important;
+}
+
+.technologies {
+  text-align: center !important;
 }
 </style>

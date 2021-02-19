@@ -14,9 +14,16 @@ interface HomeLocale extends VuetifyLocale {
 }
 
 /**
- * Translations for navigatoin panel
+ * Translations for skills page
  */
-interface Navigation extends VuetifyLocale {
+interface SkillsLocale extends VuetifyLocale {
+  description: string;
+}
+
+/**
+ * Translations for navigation panel
+ */
+interface NavigationLocale extends VuetifyLocale {
   skills: string;
   hobbies: string;
   projects: string;
@@ -26,7 +33,8 @@ interface Navigation extends VuetifyLocale {
 
 interface Locale extends VuetifyLocale {
   home: HomeLocale;
-  navigation: Navigation;
+  skills: SkillsLocale;
+  navigation: NavigationLocale;
 }
 
 /**
