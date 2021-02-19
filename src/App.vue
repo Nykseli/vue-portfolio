@@ -148,7 +148,11 @@ export default class App extends Vue {
       }
     }
 
-    this.$router.push(path);
+    // Don't try to navigate to the current location
+    // This avoids the "Avoided redundant navigation to current location" error
+    if (current != path) {
+      this.$router.push(path);
+    }
   }
 }
 </script>
