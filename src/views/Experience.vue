@@ -1,5 +1,5 @@
 <template>
-  <gif-info :title="title" gifPath="images/music-WIP1.gif">
+  <gif-info :title="title" gifPath="/images/music-WIP1.gif">
     <div class="info-job-item" v-for="(item, index) in items" :key="index">
       <h1 class="accent--text">{{ item.title }}</h1>
       <h2 class="primary--text">{{ item.company }}</h2>

@@ -1,5 +1,5 @@
 <template>
-  <gif-info :title="title" gifPath="images/music-WIP1.gif">
+  <gif-info :title="title" gifPath="/images/music-WIP1.gif">
     <div class="info-project-item" v-for="(item, index) in items" :key="index">
       <v-card>
         <a :href="item.link" target="_blank" rel="noopener noreferrer">
@@ -32,14 +32,14 @@ export default class Projects extends Vue {
   public items = [
     {
       title: "Project title",
-      image: "images/pexels-small.jpg",
+      image: "/images/pexels-small.jpg",
       link: "https://github.com/Nykseli/yle-tekstitv",
       description:
         "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor"
     },
     {
       title: "Project title",
-      image: "images/miika-optim.jpg",
+      image: "/images/miika-optim.jpg",
       link: "https://github.com/Nykseli/yle-tekstitv",
       description:
         "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor"

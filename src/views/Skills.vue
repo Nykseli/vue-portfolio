@@ -1,5 +1,5 @@
 <template>
-  <gif-info :title="title" gifPath="images/music-WIP1.gif">
+  <gif-info :title="title" gifPath="/images/music-WIP1.gif">
     <div class="info-skill-item">
       <p class="primary--text">{{ description }}</p>
       <v-col sm="12" align="middle" justify="middle">

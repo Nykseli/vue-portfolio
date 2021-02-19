@@ -1,5 +1,5 @@
 <template>
-  <gif-info :title="title" gifPath="images/music-WIP1.gif">
+  <gif-info :title="title" gifPath="/images/music-WIP1.gif">
     <div class="info-hobby-item">
       <p class="primary--text">{{ text }}</p>
     </div>

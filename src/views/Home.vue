@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <v-img class="full-img" src="images/pexels-small.jpg">
+    <v-img class="full-img" src="/images/pexels-small.jpg">
       <v-container fill-height fluid>
         <v-row align="center">
           <!--
@@ -35,7 +35,7 @@
           <v-col align="center">
             <div class="home-screen-arrow">
               <div @click="scrollToHomeAbout" class="arrow-animation">
-                <v-img src="images/up-arrow-svg-blue.svg"></v-img>
+                <v-img src="/images/up-arrow-svg-blue.svg"></v-img>
               </div>
             </div>
           </v-col>
@@ -45,7 +45,7 @@
     <v-img
       class="full-img home-about-scroll"
       position="right"
-      src="images/miika-optim.jpg"
+      src="/images/miika-optim.jpg"
     >
       <v-container fill-height flud>
         <v-row align="center">

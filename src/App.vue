@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <v-navigation-drawer disable-resize-watcher v-model="drawer" app clipped>
       <v-list dense>
-        <v-list-item link @click="$router.push('/')">
+        <v-list-item link @click="routerPush('/')">
           <v-list-item-action>
             <v-icon color="secondary">mdi-view-dashboard</v-icon>
           </v-list-item-action>
@@ -12,7 +12,7 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link @click="$router.push('/experience')">
+        <v-list-item link @click="routerPush('/experience')">
           <v-list-item-action>
             <v-icon color="secondary">mdi-cog</v-icon>
           </v-list-item-action>
@@ -22,7 +22,7 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link @click="$router.push('/projects')">
+        <v-list-item link @click="routerPush('/projects')">
           <v-list-item-action>
             <v-icon color="secondary">mdi-api</v-icon>
           </v-list-item-action>
@@ -32,7 +32,7 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link @click="$router.push('/hobbies')">
+        <v-list-item link @click="routerPush('/hobbies')">
           <v-list-item-action>
             <v-icon color="secondary">mdi-api</v-icon>
           </v-list-item-action>
@@ -42,7 +42,7 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link @click="$router.push('/skills')">
+        <v-list-item link @click="routerPush('/skills')">
           <v-list-item-action>
             <v-icon color="secondary">mdi-api</v-icon>
           </v-list-item-action>
@@ -89,6 +89,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
+import { validCodes, langMatch, defaultLang } from "@/locale/locale";
 
 @Component
 export default class App extends Vue {
@@ -101,8 +102,53 @@ export default class App extends Vue {
     this.lightIcon = dark ? "mdi-lightbulb " : "mdi-lightbulb-on-outline";
   }
 
+  /**
+   * Change language and update url accordingly
+   */
   changeLang(langCode: string) {
+    // If the language is all ready selected, we don't need to do anything
+    if (this.$vuetify.lang.current === langCode) {
+      return;
+    }
+
+    // Make sure that the language is set even if the page is not reloaded
     this.$vuetify.lang.current = langCode;
+
+    // Then update the current url
+    const currentPath = this.$router.currentRoute.path;
+    let newPath = currentPath.replace(
+      new RegExp(`^/${langMatch}`),
+      `/${langCode}`
+    );
+
+    // Language prefix wasn't found so we need to add it to the path
+    if (newPath === currentPath) {
+      newPath = `/${langCode}${newPath}`;
+    }
+
+    // Remove he default language prefix if it's set
+    if (newPath.slice(1, 3) === defaultLang) {
+      // Set path to root if the slice return value is empty
+      newPath = newPath.slice(3) || "/";
+    }
+
+    this.$router.push(newPath);
+  }
+
+  /**
+   * Navigate to a page based on the path
+   */
+  routerPush(path: string) {
+    // Save the locale lang prefix to the path if it exists
+    const current = this.$router.currentRoute.path;
+    if (current.length >= 3) {
+      const lang = current.slice(1, 3);
+      if (validCodes.indexOf(lang) !== -1) {
+        path = `/${lang}${path}`;
+      }
+    }
+
+    this.$router.push(path);
   }
 }
 </script>

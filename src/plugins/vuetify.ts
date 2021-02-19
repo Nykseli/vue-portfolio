@@ -3,6 +3,7 @@ import Vuetify from "vuetify/lib/framework";
 
 import en from "@/locale/en";
 import fi from "@/locale/fi";
+import { defaultLang } from "@/locale/locale";
 
 Vue.use(Vuetify);
 
@@ -33,6 +34,6 @@ export default new Vuetify({
   },
   lang: {
     locales: { fi, en },
-    current: "en"
+    current: defaultLang
   }
 });

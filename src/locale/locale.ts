@@ -36,3 +36,9 @@ interface Locale extends VuetifyLocale {
 export function genLocale(locale: Locale) {
   return locale;
 }
+
+const validCodes = ["fi", "en"];
+const langMatch = `(${validCodes.join("|")})`;
+const defaultLang = "en";
+
+export { validCodes, defaultLang, langMatch };
