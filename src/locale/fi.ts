@@ -24,6 +24,35 @@ const fiLocale = genLocale({
     description2:
       "Tykkään käydä myös taidemuseoissa ja nauttia maalaustaiteesta. Olenkin viimeaikoina opetellut piirtämään ja animoimaan siinä toivottossa että se parantaisi minun graaffisen suunnittelun taitoja. Sivuilla näkyvä robotti onkin minun piirtämä ja animoima!"
   },
+  experience: {
+    title: "TYÖKOKEMUS",
+    item1: {
+      title: "Freelanseri / Opiskelija",
+      company: "",
+      duration: "2018 - nyt",
+      description1:
+        "Pieniä freelanseri nettisivu projekteja Javasciptillä (ReactJs, VueJs) ja Php:llä (Laravel)",
+      description2:
+        "Suurin osa vapaa-ajasta käytetty uusien teknologioiden oppimiseen.",
+      description3: "Aloitin opiskelut Turun Yliopistossa.",
+      description4:
+        "Keskittynyt parantamaan asiakaskontakti ja graafisen suunnitelun taitoja sekä tekemään parempia ohjelmisoja kaikille.",
+      description5: ""
+    },
+    item2: {
+      title: "Full Stack / IoT Devaaja",
+      company: "Firstview",
+      duration: "2016 - 2017",
+      description1:
+        "Vastuussa yli 10 000 Linux ja android pohjaisen IoT laitteen ylläpidosta ja kehityksestä.",
+      description2:
+        "Osana pientä Full Stack tiimiä joka oli vastuussa käyttöliittymän kehityksessä jolla ohjattiin IoT laitteita.",
+      description3: "Linux pohjaiset IoT laitteet: Python, Bash, C ja C++.",
+      description4: "Android kehitys: Java ja JavaScript (JQuery).",
+      description5:
+        "Full Stack kehitys: JavaSript (JQuery, ReactJs) ja Php (Laravel)."
+    }
+  },
   navigation: {
     skills: "Osaaminen",
     hobbies: "Harrastukset",

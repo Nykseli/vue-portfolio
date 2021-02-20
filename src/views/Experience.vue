@@ -4,7 +4,12 @@
       <h1 class="accent--text">{{ item.title }}</h1>
       <h2 class="primary--text">{{ item.company }}</h2>
       <h3 class="primary--text">{{ item.duration }}</h3>
-      <p class="secondary--text" v-for="(p, i2) in item.descriptions" :key="i2">
+      <!-- TODO: sparate v-ifs for each description field? -->
+      <p
+        class="secondary--text"
+        v-for="(p, i2) in pFilter(item.descriptions)"
+        :key="i2"
+      >
         - {{ p }}
       </p>
     </div>
@@ -21,47 +26,45 @@ import GifInfo from "@/components/GifInfo.vue";
   }
 })
 export default class Experience extends Vue {
-  // TODO: i18n
-  // TODO: actual text
-  public title = "Work experience";
-  public items = [
-    {
-      title: "Job title",
-      company: "company",
-      duration: "2013-2014",
+  private tl(item: string, name: string): string {
+    return this.$vuetify.lang.t(`$vuetify.experience.${item}.${name}`);
+  }
+
+  private item(item: string) {
+    return {
+      title: this.tl(item, "title"),
+      company: this.tl(item, "company"),
+      duration: this.tl(item, "duration"),
       descriptions: [
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor",
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor",
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor"
+        this.tl(item, "description1"),
+        this.tl(item, "description2"),
+        this.tl(item, "description3"),
+        this.tl(item, "description4"),
+        this.tl(item, "description5")
       ]
-    },
-    {
-      title: "Job title",
-      company: "company",
-      duration: "2013-2014",
-      descriptions: [
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor",
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor",
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor"
-      ]
-    },
-    {
-      title: "Job title",
-      company: "company",
-      duration: "2013-2014",
-      descriptions: [
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor",
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor",
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor"
-      ]
-    }
-  ];
+    };
+  }
+
+  /* Filter empty descriptions */
+  private pFilter(items: Array<string>): Array<string> {
+    return items.filter(value => value.length !== 0);
+  }
+
+  get items() {
+    return [this.item("item1"), this.item("item2")];
+  }
+
+  get title() {
+    return this.$vuetify.lang.t("$vuetify.experience.title").toUpperCase();
+  }
 }
 </script>
 
 <style scoped>
 .info-job-item {
   margin-right: 10px;
+  padding-bottom: 30px;
+  line-height: 1.3;
 }
 
 .info-job-item > h1 {
@@ -75,5 +78,9 @@ export default class Experience extends Vue {
 .info-job-item > h3 {
   font-size: 18px;
   padding-bottom: 10px;
+}
+
+.info-job-item > p {
+  line-height: 1.2;
 }
 </style>

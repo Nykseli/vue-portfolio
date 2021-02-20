@@ -28,6 +28,23 @@ interface HobbiesLocale extends VuetifyLocale {
   description2: string;
 }
 
+interface ExperienceLocaleItem extends VuetifyLocale {
+  title: string;
+  company: string;
+  duration: string;
+  description1: string;
+  description2: string;
+  description3: string;
+  description4: string;
+  description5: string;
+}
+
+interface ExperienceLocale extends VuetifyLocale {
+  title: string;
+  item1: ExperienceLocaleItem;
+  item2: ExperienceLocaleItem;
+}
+
 /**
  * Translations for navigation panel
  */
@@ -43,6 +60,7 @@ interface Locale extends VuetifyLocale {
   home: HomeLocale;
   skills: SkillsLocale;
   hobbies: HobbiesLocale;
+  experience: ExperienceLocale;
   navigation: NavigationLocale;
 }
 

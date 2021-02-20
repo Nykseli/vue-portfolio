@@ -24,6 +24,35 @@ const enLocale = genLocale({
     description2:
       "I also like going to art museums to enjoy art. Lately I've been learning how to draw and animate in the hopes that it will improve my graphical design skills. The animated robot on my website is drawn and animated by me!"
   },
+  experience: {
+    title: "WORK EXPERIENCE",
+    item1: {
+      title: "Freelancer / Student",
+      company: "",
+      duration: "2018 - present",
+      description1:
+        "Small freelance website projects with JavaScript (ReactJs, VueJs) and Php (Laravel).",
+      description2:
+        "Most of my freetime spent on getting familiar with new technologies.",
+      description3: "Started studying in University of Turku.",
+      description4:
+        "Focusing on improving my customer relation and graphical desing skills and making better software for everyone.",
+      description5: ""
+    },
+    item2: {
+      title: "Full Stack / IoT developer",
+      company: "Firstview",
+      duration: "2016 - 2017",
+      description1:
+        "Responsible for maintaining and developing over 10 000 Linux and Android based digital signage IoT devices all over the world.",
+      description2:
+        "Part of the small full stack team that was responsible for developing the user interface controlling the IoT devices.",
+      description3: "Linux based IoT devices: Python, Bash, C and C++.",
+      description4: "Android development: Java and JavaScript (JQuery).",
+      description5:
+        "Full Stack development: JavaScript (JQuery, ReactJs) and Php."
+    }
+  },
   navigation: {
     skills: "Skills",
     hobbies: "Hobbies",
