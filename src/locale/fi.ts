@@ -24,6 +24,41 @@ const fiLocale = genLocale({
     description2:
       "Tykkään käydä myös taidemuseoissa ja nauttia maalaustaiteesta. Olenkin viimeaikoina opetellut piirtämään ja animoimaan siinä toivottossa että se parantaisi minun graaffisen suunnittelun taitoja. Sivuilla näkyvä robotti onkin minun piirtämä ja animoima!"
   },
+  projects: {
+    technology: "Teknologiat",
+    item1: {
+      title: "VueJs portfolio",
+      image: "/images/website.jpg",
+      link: "https://github.com/Nykseli/vue-portfolio",
+      technology: "TypeScript VueJs Vuetify",
+      description:
+        "VueJs:llä toteutettu nettisivu, TypeScript:iä ja Vietify -kirjastoa hyödyntäen. Animaatiot ovat minun piirtämiä ja animoimia!"
+    },
+    item2: {
+      title: "Yle Teksti-tv",
+      image: "/images/teksti-tv.png",
+      link: "https://github.com/Nykseli/yle-tekstitv",
+      technology: "C ncurses",
+      description:
+        "Yksinkertainen terminaali applikaatio Ylen tekstipohjaisen teksti-tv:n lukemiseen."
+    },
+    item3: {
+      title: "Media Controller Server",
+      image: "/images/media-controller.png",
+      link: "https://github.com/Nykseli/media-controller-server",
+      technology: "Python Linux",
+      description:
+        "Linux applikaatio media sisällön ja laitteeen ohjaamiseen. Tällä voi muunmuassa katsoa videoita VLC soittimella tai ohjata Netflix nettisivua."
+    },
+    item4: {
+      title: "Media Controller Client",
+      image: "/images/media-client.png",
+      link: "https://github.com/Nykseli/android-media-controller",
+      technology: "Android Java",
+      description:
+        "Android pohjainen asiakasohjelma media serverin ohjaamiseen."
+    }
+  },
   experience: {
     title: "TYÖKOKEMUS",
     item1: {

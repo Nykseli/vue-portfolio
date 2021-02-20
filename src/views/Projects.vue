@@ -10,6 +10,8 @@
         </v-card-subtitle>
         <v-card-text>
           <p class="secondary--text">{{ item.description }}</p>
+          <br />
+          <p class="secondary--text">{{ technoTl(item.technology) }}</p>
         </v-card-text>
       </v-card>
     </div>
@@ -19,6 +21,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import GifInfo from "@/components/GifInfo.vue";
+import { ProjectLocaleItem } from "@/locale/locale";
 
 @Component({
   components: {
@@ -26,25 +29,38 @@ import GifInfo from "@/components/GifInfo.vue";
   }
 })
 export default class Projects extends Vue {
-  // TODO: i18n
-  // TODO: actual text
-  public title = "Projects";
-  public items = [
-    {
-      title: "Project title",
-      image: "/images/pexels-small.jpg",
-      link: "https://github.com/Nykseli/yle-tekstitv",
-      description:
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor"
-    },
-    {
-      title: "Project title",
-      image: "/images/miika-optim.jpg",
-      link: "https://github.com/Nykseli/yle-tekstitv",
-      description:
-        "ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor"
-    }
-  ];
+  private tl(item: string, name: string): string {
+    return this.$vuetify.lang.t(`$vuetify.projects.${item}.${name}`);
+  }
+
+  private item(item: string): ProjectLocaleItem {
+    return {
+      link: this.tl(item, "link"),
+      image: this.tl(item, "image"),
+      title: this.tl(item, "title"),
+      // TODO: should technologies have links and/or logos?
+      technology: this.tl(item, "technology"),
+      description: this.tl(item, "description")
+    };
+  }
+
+  private technoTl(tech: string): string {
+    const techTl = this.$vuetify.lang.t(`$vuetify.projects.technology`);
+    return `${techTl}: ${tech}`;
+  }
+
+  get items(): Array<ProjectLocaleItem> {
+    return [
+      this.item("item1"),
+      this.item("item2"),
+      this.item("item3"),
+      this.item("item4")
+    ];
+  }
+
+  get title() {
+    return this.$vuetify.lang.t("$vuetify.navigation.projects").toUpperCase();
+  }
 }
 </script>
 
@@ -64,5 +80,9 @@ export default class Projects extends Vue {
 .info-project-item > h3 {
   font-size: 18px;
   padding-bottom: 10px;
+}
+
+p {
+  line-height: 1.1;
 }
 </style>

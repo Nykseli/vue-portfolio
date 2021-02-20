@@ -24,6 +24,40 @@ const enLocale = genLocale({
     description2:
       "I also like going to art museums to enjoy art. Lately I've been learning how to draw and animate in the hopes that it will improve my graphical design skills. The animated robot on my website is drawn and animated by me!"
   },
+  projects: {
+    technology: "Technologies",
+    item1: {
+      title: "VueJs portfolio",
+      image: "/images/website.jpg",
+      link: "https://github.com/Nykseli/vue-portfolio",
+      technology: "TypeScript VueJs Vuetify",
+      description:
+        "VueJs website with TypeScript and Vuetify. Animations are drawn and animated by me!"
+    },
+    item2: {
+      title: "Yle Teksti-tv",
+      image: "/images/teksti-tv.png",
+      link: "https://github.com/Nykseli/yle-tekstitv",
+      technology: "C ncurses",
+      description:
+        "Simple terminal application for reading text based Yle teletext."
+    },
+    item3: {
+      title: "Media Controller Server",
+      image: "/images/media-controller.png",
+      link: "https://github.com/Nykseli/media-controller-server",
+      technology: "Python Linux",
+      description:
+        "Linux application for controlling media content and the target device. You can for example play vidoes with vlc or control netflix website with it."
+    },
+    item4: {
+      title: "Media Controller Client",
+      image: "/images/media-client.png",
+      link: "https://github.com/Nykseli/android-media-controller",
+      technology: "Android Java",
+      description: "Android client application for controlling the media server"
+    }
+  },
   experience: {
     title: "WORK EXPERIENCE",
     item1: {
