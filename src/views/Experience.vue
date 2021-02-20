@@ -1,5 +1,10 @@
 <template>
-  <gif-info :title="title" gifPath="/images/music-WIP1.gif">
+  <!-- Turn off centered when adding a 3rd experience column  -->
+  <gif-info
+    :title="title"
+    gifPath="/images/music-WIP1.gif"
+    :centeredSlot="true"
+  >
     <div class="info-job-item" v-for="(item, index) in items" :key="index">
       <h1 class="accent--text">{{ item.title }}</h1>
       <h2 class="primary--text">{{ item.company }}</h2>

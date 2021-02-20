@@ -48,6 +48,8 @@ export default class GifInfo extends Vue {
 
 .gifinfo-scroll-card {
   box-shadow: none !important;
+  /* We want a transparent background on both dark and light theme */
+  background: #00000000 !important;
 }
 
 .centered-slot {
