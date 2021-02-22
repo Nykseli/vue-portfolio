@@ -4,50 +4,50 @@
       <v-list dense>
         <v-list-item link @click="routerPush('/')">
           <v-list-item-action>
-            <v-icon color="secondary">mdi-view-dashboard</v-icon>
+            <v-icon color="secondary">mdi-home-circle</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="primary--text">
+            <v-list-item-title class="primary--text nav-text">
               {{ this.$vuetify.lang.t("$vuetify.navigation.frontPage") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link @click="routerPush('/experience')">
           <v-list-item-action>
-            <v-icon color="secondary">mdi-cog</v-icon>
+            <v-icon color="secondary">mdi-form-select</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="primary--text">
+            <v-list-item-title class="primary--text nav-text">
               {{ this.$vuetify.lang.t("$vuetify.navigation.experience") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link @click="routerPush('/projects')">
           <v-list-item-action>
-            <v-icon color="secondary">mdi-api</v-icon>
+            <v-icon color="secondary">mdi-github</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="primary--text">
+            <v-list-item-title class="primary--text nav-text">
               {{ this.$vuetify.lang.t("$vuetify.navigation.projects") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link @click="routerPush('/hobbies')">
           <v-list-item-action>
-            <v-icon color="secondary">mdi-api</v-icon>
+            <v-icon color="secondary">mdi-guitar-acoustic</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="primary--text">
+            <v-list-item-title class="primary--text nav-text">
               {{ this.$vuetify.lang.t("$vuetify.navigation.hobbies") }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item link @click="routerPush('/skills')">
           <v-list-item-action>
-            <v-icon color="secondary">mdi-api</v-icon>
+            <v-icon color="secondary">mdi-toolbox-outline</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title class="primary--text">
+            <v-list-item-title class="primary--text nav-text">
               {{ this.$vuetify.lang.t("$vuetify.navigation.skills") }}
             </v-list-item-title>
           </v-list-item-content>
@@ -167,5 +167,10 @@ export default class App extends Vue {
 .container {
   /* Override the vuetify container to avoid the weird full page scrolling */
   padding: 0px !important;
+}
+
+.nav-text {
+  font-size: 22px !important;
+  line-height: 2rem !important;
 }
 </style>
