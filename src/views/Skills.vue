@@ -1,9 +1,5 @@
 <template>
-  <gif-info
-    :title="title"
-    gifPath="/images/music-WIP1.gif"
-    :centeredSlot="true"
-  >
+  <gif-info :title="title" gifPath="/images/skills.gif" :centeredSlot="true">
     <div class="info-skill-item">
       <p class="primary--text">
         {{ this.$vuetify.lang.t("$vuetify.skills.description") }}

@@ -1,5 +1,5 @@
 <template>
-  <gif-info :title="title" gifPath="/images/music-WIP1.gif">
+  <gif-info :title="title" gifPath="/images/projects.gif">
     <div class="info-project-item" v-for="(item, index) in items" :key="index">
       <v-card>
         <a :href="item.link" target="_blank" rel="noopener noreferrer">
