@@ -62,6 +62,11 @@ export default class GifInfo extends Vue {
   padding-top: 50px;
 }
 
+.animated-gif >>> .v-responsive__content {
+  /* Enable earlier breakpoint regartless of the gif size */
+  width: 800px !important;
+}
+
 /* 600px is the sm grid brekpoint */
 @media (min-width: 600px) {
   .gifinfo-scroll-card {
