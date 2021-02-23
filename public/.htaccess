@@ -1,0 +1,19 @@
+# Apache .htaccess file for dealing with vue router rules
+# see https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations
+# for more information
+
+# Note that this also deals with the http -> https redirection
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # HTTPS redirect
+  RewriteCond %{SERVER_PORT} 80
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # Vue router condition
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

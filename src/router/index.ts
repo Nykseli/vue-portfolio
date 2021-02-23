@@ -45,6 +45,11 @@ const routes: Array<RouteConfig> = [
 ];
 
 const router = new VueRouter({
+  // On a apache server, the history mode needs a rewrite rule.
+  // See ./public/.htaccess
+  // and
+  // https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations
+  mode: "history",
   base: process.env.BASE_URL,
   routes
 });
