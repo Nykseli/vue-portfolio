@@ -5,7 +5,7 @@
     </v-row>
     <v-row align="center" justify="center">
       <v-col align="center" sm="6">
-        <v-img class="animated-gif" :src="gifPath" />
+        <img class="animated-gif" :src="gifPath" />
       </v-col>
       <v-col class="gifinfo-text primary--text" align="center" sm="6">
         <v-card class="gifinfo-scroll-card" :class="centered">
