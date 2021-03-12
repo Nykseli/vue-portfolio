@@ -12,6 +12,9 @@
           <p class="secondary--text">{{ item.description }}</p>
           <br />
           <p class="secondary--text">{{ technoTl(item.technology) }}</p>
+          <a :href="item.link" target="_blank" rel="noopener noreferrer">
+            <p class="secondary--text">{{ item.link }}</p>
+          </a>
         </v-card-text>
       </v-card>
     </div>
