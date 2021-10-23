@@ -25,8 +25,8 @@ import GifInfo from "@/components/GifInfo.vue";
 
 @Component({
   components: {
-    GifInfo
-  }
+    GifInfo,
+  },
 })
 export default class Skills extends Vue {
   //TODO: Should these be in order of relevance?
@@ -34,87 +34,87 @@ export default class Skills extends Vue {
   private technologies = [
     {
       name: "Android",
-      icon: "devicon-android-plain"
+      icon: "devicon-android-plain",
     },
     {
       name: "Bash",
-      icon: "devicon-bash-plain"
+      icon: "devicon-bash-plain",
     },
     {
       name: "C",
-      icon: "devicon-c-plain"
+      icon: "devicon-c-plain",
     },
     {
       name: "C++",
-      icon: "devicon-cplusplus-plain"
+      icon: "devicon-cplusplus-plain",
     },
     {
       name: "Css",
-      icon: "devicon-css3-plain"
+      icon: "devicon-css3-plain",
     },
     {
       name: "Flutter",
-      icon: "devicon-flutter-plain"
+      icon: "devicon-flutter-plain",
     },
     {
       name: "Git",
-      icon: "devicon-git-plain"
+      icon: "devicon-git-plain",
     },
     {
       name: "Go",
-      icon: "devicon-go-plain"
+      icon: "devicon-go-plain",
     },
     {
       name: "Html",
-      icon: "devicon-html5-plain"
+      icon: "devicon-html5-plain",
     },
     {
       name: "Java",
-      icon: "devicon-java-plain"
+      icon: "devicon-java-plain",
     },
     {
       name: "JavaScript",
-      icon: "devicon-javascript-plain"
+      icon: "devicon-javascript-plain",
     },
     {
       name: "Kotlin",
-      icon: "devicon-kotlin-plain"
+      icon: "devicon-kotlin-plain",
     },
     {
       name: "Linux",
-      icon: "devicon-linux-plain"
+      icon: "devicon-linux-plain",
     },
     {
       name: "Mysql",
-      icon: "devicon-mysql-plain"
+      icon: "devicon-mysql-plain",
     },
     {
       name: "Php",
-      icon: "devicon-php-plain"
+      icon: "devicon-php-plain",
     },
     {
       name: "Python",
-      icon: "devicon-python-plain"
+      icon: "devicon-python-plain",
     },
     {
       name: "ReactJs",
-      icon: "devicon-react-plain"
+      icon: "devicon-react-plain",
     },
     {
       name: "Rust",
-      icon: "devicon-rust-plain"
+      icon: "devicon-rust-plain",
     },
     {
       name: "TypeScript",
-      icon: "devicon-typescript-plain"
+      icon: "devicon-typescript-plain",
     },
     {
       name: "VueJs",
-      icon: "devicon-vuejs-plain"
-    }
+      icon: "devicon-vuejs-plain",
+    },
   ];
 
-  get title() {
+  get title(): string {
     return this.$vuetify.lang.t("$vuetify.navigation.skills").toUpperCase();
   }
 }

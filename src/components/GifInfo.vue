@@ -26,7 +26,7 @@ export default class GifInfo extends Vue {
   @Prop({ required: true }) private gifPath!: string;
   @Prop({ required: false }) private centeredSlot?: boolean;
 
-  get centered() {
+  get centered(): string {
     return this.centeredSlot ? "centered-slot" : "";
   }
 }

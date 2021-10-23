@@ -88,7 +88,7 @@ interface Locale extends VuetifyLocale {
  * Helper function to create the correct locale layout.
  * See src/locale/en.ts for usage example
  */
-export function genLocale(locale: Locale) {
+export function genLocale(locale: Locale): Locale {
   return locale;
 }
 

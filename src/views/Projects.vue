@@ -28,8 +28,8 @@ import { ProjectLocaleItem } from "@/locale/locale";
 
 @Component({
   components: {
-    GifInfo
-  }
+    GifInfo,
+  },
 })
 export default class Projects extends Vue {
   private tl(item: string, name: string): string {
@@ -43,7 +43,7 @@ export default class Projects extends Vue {
       title: this.tl(item, "title"),
       // TODO: should technologies have links and/or logos?
       technology: this.tl(item, "technology"),
-      description: this.tl(item, "description")
+      description: this.tl(item, "description"),
     };
   }
 
@@ -57,11 +57,11 @@ export default class Projects extends Vue {
       this.item("item1"),
       this.item("item2"),
       this.item("item3"),
-      this.item("item4")
+      this.item("item4"),
     ];
   }
 
-  get title() {
+  get title(): string {
     return this.$vuetify.lang.t("$vuetify.navigation.projects").toUpperCase();
   }
 }

@@ -96,7 +96,7 @@ export default class App extends Vue {
   public drawer = false;
   public lightIcon = "mdi-lightbulb-on-outline";
 
-  changeTheme() {
+  changeTheme(): void {
     const dark = !this.$vuetify.theme.dark;
     this.$vuetify.theme.dark = dark;
     this.lightIcon = dark ? "mdi-lightbulb " : "mdi-lightbulb-on-outline";
@@ -105,7 +105,7 @@ export default class App extends Vue {
   /**
    * Change language and update url accordingly
    */
-  changeLang(langCode: string) {
+  changeLang(langCode: string): void {
     // If the language is all ready selected, we don't need to do anything
     if (this.$vuetify.lang.current === langCode) {
       return;
@@ -138,7 +138,7 @@ export default class App extends Vue {
   /**
    * Navigate to a page based on the path
    */
-  routerPush(path: string) {
+  routerPush(path: string): void {
     // Save the locale lang prefix to the path if it exists
     const current = this.$router.currentRoute.path;
     if (current.length >= 3) {

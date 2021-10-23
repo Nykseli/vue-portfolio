@@ -73,20 +73,20 @@ const VueTyper = require("vue-typer").VueTyper;
 
 @Component({
   components: {
-    VueTyper
-  }
+    VueTyper,
+  },
 })
 export default class Home extends Vue {
   // get means that the values are computed i.e. updated lang.current is changed
-  get typerList() {
+  get typerList(): Array<string> {
     return [
       this.$vuetify.lang.t("$vuetify.home.typerInfo1"),
       this.$vuetify.lang.t("$vuetify.home.typerInfo2"),
-      this.$vuetify.lang.t("$vuetify.home.typerInfo3")
+      this.$vuetify.lang.t("$vuetify.home.typerInfo3"),
     ];
   }
 
-  scrollToHomeAbout() {
+  scrollToHomeAbout(): void {
     const el = this.$el.getElementsByClassName("home-about-scroll")[0];
 
     if (el) {

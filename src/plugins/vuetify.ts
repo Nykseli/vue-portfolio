@@ -19,7 +19,7 @@ export default new Vuetify({
         success: "#82a0c4",
         info: "#638caa",
         warning: "#5c6bc0",
-        error: "#529cff"
+        error: "#529cff",
       },
       light: {
         primary: "#38587b",
@@ -28,12 +28,12 @@ export default new Vuetify({
         success: "#82a0c4",
         info: "#638caa",
         warning: "#5c6bc0",
-        error: "#529cff"
-      }
-    }
+        error: "#529cff",
+      },
+    },
   },
   lang: {
     locales: { fi, en },
-    current: defaultLang
-  }
+    current: defaultLang,
+  },
 });

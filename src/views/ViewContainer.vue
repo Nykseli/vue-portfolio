@@ -13,7 +13,7 @@ import { defaultLang } from "@/locale/locale";
  */
 @Component({})
 export default class ViewContainer extends Vue {
-  beforeCreate() {
+  beforeCreate(): void {
     // Use en as a default locale it's not set
     // TODO: handle invalid locales too?
     const locale = this.$route.params.lang || defaultLang;

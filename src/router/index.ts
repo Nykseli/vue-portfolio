@@ -18,30 +18,30 @@ const routes: Array<RouteConfig> = [
       {
         path: "",
         name: "Home",
-        component: Home
+        component: Home,
       },
       {
         path: "experience",
         name: "Experience",
-        component: Experience
+        component: Experience,
       },
       {
         path: "skills",
         name: "Skills",
-        component: Skills
+        component: Skills,
       },
       {
         path: "hobbies",
         name: "Hobbies",
-        component: Hobbies
+        component: Hobbies,
       },
       {
         path: "projects",
         name: "Projects",
-        component: Projects
-      }
-    ]
-  }
+        component: Projects,
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
@@ -51,7 +51,7 @@ const router = new VueRouter({
   // https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

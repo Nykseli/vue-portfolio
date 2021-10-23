@@ -17,11 +17,11 @@ import GifInfo from "@/components/GifInfo.vue";
 
 @Component({
   components: {
-    GifInfo
-  }
+    GifInfo,
+  },
 })
 export default class Hobbies extends Vue {
-  get title() {
+  get title(): string {
     return this.$vuetify.lang.t("$vuetify.navigation.hobbies").toUpperCase();
   }
 }

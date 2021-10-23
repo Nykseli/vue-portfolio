@@ -25,17 +25,24 @@
 import { Component, Vue } from "vue-property-decorator";
 import GifInfo from "@/components/GifInfo.vue";
 
+type ExperienceItem = {
+  title: string;
+  company: string;
+  duration: string;
+  descriptions: Array<string>;
+};
+
 @Component({
   components: {
-    GifInfo
-  }
+    GifInfo,
+  },
 })
 export default class Experience extends Vue {
   private tl(item: string, name: string): string {
     return this.$vuetify.lang.t(`$vuetify.experience.${item}.${name}`);
   }
 
-  private item(item: string) {
+  private item(item: string): ExperienceItem {
     return {
       title: this.tl(item, "title"),
       company: this.tl(item, "company"),
@@ -45,21 +52,21 @@ export default class Experience extends Vue {
         this.tl(item, "description2"),
         this.tl(item, "description3"),
         this.tl(item, "description4"),
-        this.tl(item, "description5")
-      ]
+        this.tl(item, "description5"),
+      ],
     };
   }
 
   /* Filter empty descriptions */
   private pFilter(items: Array<string>): Array<string> {
-    return items.filter(value => value.length !== 0);
+    return items.filter((value) => value.length !== 0);
   }
 
-  get items() {
+  get items(): Array<ExperienceItem> {
     return [this.item("item1"), this.item("item2")];
   }
 
-  get title() {
+  get title(): string {
     return this.$vuetify.lang.t("$vuetify.experience.title").toUpperCase();
   }
 }
