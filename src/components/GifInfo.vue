@@ -4,10 +4,18 @@
       <h1 class="success--text gifinfo-main-header">{{ title }}</h1>
     </v-row>
     <v-row align="center" justify="center">
-      <v-col align="center" sm="6">
+      <v-col align="center" cols="12" sm="12" md="6" lg="6" xl="6">
         <img class="animated-gif" :src="gifPath" />
       </v-col>
-      <v-col class="gifinfo-text primary--text" align="center" sm="6">
+      <v-col
+        class="gifinfo-text primary--text"
+        align="center"
+        cols="12"
+        sm="12"
+        md="6"
+        lg="6"
+        xl="6"
+      >
         <v-card class="gifinfo-scroll-card" :class="centered">
           <!-- The layout is injected to replace to slot -->
           <slot></slot>
@@ -67,6 +75,12 @@ export default class GifInfo extends Vue {
   width: 800px !important;
 }
 
+@media (min-width: 600px) and (max-width: 959px) {
+  .gifinfo-main-header {
+    padding-top: 64px;
+  }
+}
+
 /* 600px is the sm grid brekpoint */
 @media (min-width: 600px) {
   .gifinfo-scroll-card {
@@ -81,7 +95,6 @@ export default class GifInfo extends Vue {
 
   .gifinfo-main-header {
     font-size: 54px;
-    padding-top: 50px;
     padding-bottom: 0px;
   }
 }
