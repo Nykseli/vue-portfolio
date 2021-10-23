@@ -1,7 +1,7 @@
 <template>
   <gif-info :title="title" gifPath="/images/skills.gif" :centeredSlot="true">
     <div class="info-skill-item">
-      <p class="primary--text">
+      <p class="primary--text info-text">
         {{ this.$vuetify.lang.t("$vuetify.skills.description") }}
       </p>
       <v-col sm="12" align="center" justify="center">
@@ -131,6 +131,11 @@ export default class Skills extends Vue {
 
 .col-6 {
   flex: 0 !important;
+}
+
+.info-text {
+  text-align: center;
+  padding-bottom: 16px;
 }
 
 .technologies {
