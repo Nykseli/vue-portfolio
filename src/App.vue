@@ -89,17 +89,38 @@
 <script lang="ts">
 import Vue from "vue";
 import { Component } from "vue-property-decorator";
-import { validCodes, langMatch, defaultLang } from "@/locale/locale";
+import { validCodes, langMatch, defaultLang, Languages } from "@/locale/locale";
+import UserPreference from "@/util/userPreference";
 
 @Component
 export default class App extends Vue {
   public drawer = false;
   public lightIcon = "mdi-lightbulb-on-outline";
+  private preferences = new UserPreference();
 
-  changeTheme(): void {
-    const dark = !this.$vuetify.theme.dark;
+  mounted(): void {
+    let lang = this.preferences.getLanguage();
+    const langRegex = new RegExp(`/${langMatch}`);
+    const urlLang = this.$router.currentRoute.path.match(langRegex);
+    if (urlLang && urlLang.length > 0) {
+      // Remove the / character
+      lang = urlLang[0].slice(1, urlLang[0].length) as Languages;
+    }
+
+    this.changeLang(lang);
+    this.changeTheme(this.preferences.getIsDarkTheme());
+  }
+
+  changeTheme(isDark?: boolean): void {
+    if (isDark === this.$vuetify.theme.dark) {
+      return;
+    }
+
+    const dark = isDark !== undefined ? isDark : !this.$vuetify.theme.dark;
     this.$vuetify.theme.dark = dark;
     this.lightIcon = dark ? "mdi-lightbulb " : "mdi-lightbulb-on-outline";
+    this.preferences.setIsDarkTheme(dark);
+    this.preferences.save();
   }
 
   /**
@@ -132,6 +153,8 @@ export default class App extends Vue {
       newPath = newPath.slice(3) || "/";
     }
 
+    this.preferences.setLanguage(langCode as Languages);
+    this.preferences.save();
     this.$router.push(newPath);
   }
 

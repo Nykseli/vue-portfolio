@@ -92,8 +92,9 @@ export function genLocale(locale: Locale): Locale {
   return locale;
 }
 
+type Languages = "fi" | "en";
 const validCodes = ["fi", "en"];
 const langMatch = `(${validCodes.join("|")})`;
 const defaultLang = "en";
 
-export { validCodes, defaultLang, langMatch };
+export { validCodes, defaultLang, langMatch, Languages };
