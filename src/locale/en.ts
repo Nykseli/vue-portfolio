@@ -16,7 +16,7 @@ const enLocale = genLocale({
   },
   skills: {
     description:
-      "I'm always learning new technologies and frameworks. Here is a list of some of the technologies I have learned along the way.",
+      "I'm always learning new technologies and frameworks. Here is a list of some of the technologies I have learned along the way. I'm not a big believer in \"skill list\" but I'm always happy to talk about my skills and knowledge in different topics!",
   },
   hobbies: {
     description1:
@@ -62,9 +62,23 @@ const enLocale = genLocale({
   experience: {
     title: "WORK EXPERIENCE",
     item1: {
+      title: "Software Developer",
+      company: "Sofokus Oy",
+      duration: "2021/08 - 2022/02",
+      description1:
+        "Initial technical design and implementation of a new web based product, consisting a website and a React library. The work focused heavily on tooling and automatic code generation by utilizing TypeScript's compiler API.",
+      description2:
+        "Worked on client projects. Mostly on frontend but also did some backend work using Google Cloud Functions and Firestore.",
+      description3: "Learned the basics of Google Cloud.",
+      description4:
+        "Helped other devs to imporove their skills and knowledge on different topics, like Typescript, testing and API design.",
+      description5:
+        "Helped the company to define guideliness for developers, so the company could have more unified way of doing things.",
+    },
+    item2: {
       title: "Freelancer / Student",
       company: "",
-      duration: "2018 - present",
+      duration: "2018 - 2021",
       description1:
         "Small freelance website projects with JavaScript (ReactJs, VueJs) and Php (Laravel).",
       description2:
@@ -74,7 +88,7 @@ const enLocale = genLocale({
         "Focusing on improving my customer relation and graphical desing skills and making better software for everyone.",
       description5: "",
     },
-    item2: {
+    item3: {
       title: "Full Stack / IoT developer",
       company: "Firstview",
       duration: "2016 - 2017",

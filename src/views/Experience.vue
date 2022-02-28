@@ -63,7 +63,7 @@ export default class Experience extends Vue {
   }
 
   get items(): Array<ExperienceItem> {
-    return [this.item("item1"), this.item("item2")];
+    return [this.item("item1"), this.item("item2"), this.item("item3")];
   }
 
   get title(): string {

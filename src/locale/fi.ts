@@ -16,7 +16,7 @@ const fiLocale = genLocale({
   },
   skills: {
     description:
-      "Opiskelen jatkuvasti uusia teknologioita ja kirjastoja. Tässä lista teknologioista joista on matkan varrella kertynyt enemmän tai vähemmän kokemusta!",
+      'Opiskelen jatkuvasti uusia teknologioita ja kirjastoja. Tässä lista teknologioista joista on matkan varrella kertynyt enemmän tai vähemmän kokemusta. En ole mikään suurin "osaamis -listojen" fani, mutta keskustelen mielelläni lisää osaamisestani!',
   },
   hobbies: {
     description1:
@@ -62,6 +62,20 @@ const fiLocale = genLocale({
   experience: {
     title: "TYÖKOKEMUS",
     item1: {
+      title: "Software Developer",
+      company: "Sofokus Oy",
+      duration: "2021/08 - 2022/02",
+      description1:
+        "Uuden verkkopohjaisen tuotteen alustava tekninen suunnittelu ja toteutus, joka koostuu verkkosivuston ja React-kirjaston rakentamisesta. Työ keskittyi vahvasti työkalujen kehittämiseen ja automaattiseen koodin tuottamiseen TypeScriptin kääntäjän API:a hyödyntäen.",
+      description2:
+        "Työskentelin asiakasprojekteissa. Enimmäkseen frontendin parissa, mutta myös jonkin verran backend-työtä Google Cloud Functioneita ja Firestorea käyttäen.",
+      description3: "Opettelin Google Cloud:in perusteet.",
+      description4:
+        "Autoin muita kehittäjiä lisäämään taitojaan ja tietämystään eri aiheista, kuten Typescriptistä, testauksesta ja API-suunnittelusta.",
+      description5:
+        "Autoin yritystä määrittelemään ohjeita kehittäjille, jotta yrityksellä olisi yhtenäisempi tapa toimia.",
+    },
+    item2: {
       title: "Freelanseri / Opiskelija",
       company: "",
       duration: "2018 - nyt",
@@ -74,7 +88,7 @@ const fiLocale = genLocale({
         "Keskittynyt parantamaan asiakaskontakti ja graafisen suunnitelun taitoja sekä tekemään parempia ohjelmisoja kaikille.",
       description5: "",
     },
-    item2: {
+    item3: {
       title: "Full Stack / IoT Devaaja",
       company: "Firstview",
       duration: "2016 - 2017",

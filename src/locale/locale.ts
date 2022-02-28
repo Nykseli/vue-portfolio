@@ -62,6 +62,7 @@ interface ExperienceLocale extends VuetifyLocale {
   title: string;
   item1: ExperienceLocaleItem;
   item2: ExperienceLocaleItem;
+  item3: ExperienceLocaleItem;
 }
 
 /**

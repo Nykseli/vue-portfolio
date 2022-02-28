@@ -37,6 +37,10 @@ export default class Skills extends Vue {
       icon: "devicon-android-plain",
     },
     {
+      name: "Babel",
+      icon: "devicon-babel-plain",
+    },
+    {
       name: "Bash",
       icon: "devicon-bash-plain",
     },
@@ -53,8 +57,20 @@ export default class Skills extends Vue {
       icon: "devicon-css3-plain",
     },
     {
+      name: "Django",
+      icon: "devicon-django-plain",
+    },
+    {
+      name: "Firebase",
+      icon: "devicon-firebase-plain",
+    },
+    {
       name: "Flutter",
       icon: "devicon-flutter-plain",
+    },
+    {
+      name: "Gcc",
+      icon: "devicon-gcc-plain",
     },
     {
       name: "Git",
@@ -63,6 +79,18 @@ export default class Skills extends Vue {
     {
       name: "Go",
       icon: "devicon-go-plain",
+    },
+    {
+      name: "Godot",
+      icon: "devicon-godot-plain",
+    },
+    {
+      name: "Google Cloud",
+      icon: "devicon-googlecloud-plain",
+    },
+    {
+      name: "GrahpQL",
+      icon: "devicon-graphql-plain",
     },
     {
       name: "Html",
@@ -77,16 +105,36 @@ export default class Skills extends Vue {
       icon: "devicon-javascript-plain",
     },
     {
+      name: "Jest",
+      icon: "devicon-jest-plain",
+    },
+    {
       name: "Kotlin",
       icon: "devicon-kotlin-plain",
+    },
+    {
+      name: "Laravel",
+      icon: "devicon-laravel-plain",
     },
     {
       name: "Linux",
       icon: "devicon-linux-plain",
     },
     {
+      name: "Material UI",
+      icon: "devicon-materialui-plain",
+    },
+    {
       name: "Mysql",
       icon: "devicon-mysql-plain",
+    },
+    {
+      name: "Node JS",
+      icon: "devicon-nodejs-plain",
+    },
+    {
+      name: "Npm",
+      icon: "devicon-npm-original-wordmark",
     },
     {
       name: "Php",
@@ -101,6 +149,10 @@ export default class Skills extends Vue {
       icon: "devicon-react-plain",
     },
     {
+      name: "Redux",
+      icon: "devicon-redux-original",
+    },
+    {
       name: "Rust",
       icon: "devicon-rust-plain",
     },
@@ -111,6 +163,10 @@ export default class Skills extends Vue {
     {
       name: "VueJs",
       icon: "devicon-vuejs-plain",
+    },
+    {
+      name: "Yarn",
+      icon: "devicon-yarn-plain",
     },
   ];
 
