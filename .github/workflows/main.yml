@@ -1,0 +1,37 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3.0.0
+      
+      - name: Write SSH keys
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          host="{{ secrets.WDEPLOY_URL }}"
+          hosts="$(dig +short "$host" | grep -v '\.$' | sed -z 's|\n|,|g')$host"
+          ssh-keyscan -H "$hosts" > ~/.ssh/known_hosts
+      
+      - name: Setup env, build and deploy
+        run: |
+          export WDEPLOY_USER="${{ secrets.WDEPLOY_USER }}"
+          export WDEPLOY_PASS="${{ secrets.WDEPLOY_PASS }}"
+          export WDEPLOY_URL="${{ secrets.WDEPLOY_URL }}"
+          export WDEPLOY_PATH="${{ secrets.WDEPLOY_PATH }}"
+          npm ci
+          ./deploy.sh normal
+          
