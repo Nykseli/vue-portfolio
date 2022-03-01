@@ -9,9 +9,9 @@ const fiLocale = genLocale({
     description1:
       "Olen ohjelmistokehittäjä Turusta joka on aina etsimässä uusia haasteita.",
     description2:
-      "Käytän aikani opetellen erillaisia ohjelmistoja yrittäen hahmottaa mitkä työkalut sopivat minulle ja minkälaista ohjelmistoja haluan kehittää. Olenkin käyttänyt kaikenlaisia ohjelmistoja matalan tason assemblystä korkean tason pelikehitykseen Godot pelimoottorilla.",
+      "Käytän aikani opetellen erillaisia ohjelmistoja yrittäen hahmottaa mitkä työkalut sopivat minulle ja minkälaista ohjelmistoja haluan kehittää. Olenkin käyttänyt kaikenlaisia ohjelmistoja matalan tason assemblystä korkean tason pelikehitykseen Godot pelimoottorilla. Tällä hetkellä olenkin yhdistämässä osaamisalueitani kehittämällä nettisivun jonka avulla voi suunnitella nettisivuja. Projektissa yhdistyy web teknologiat sekä Godot pelimoottorin 2D renderöiti.",
     description3:
-      "Vaikka olen erittäin kiinnostunut teknologoista, olen vielä kiinnostuneempi tekemään ohjelmistoja joita ihmiset haluavat käyttää. Sen takia olenkin viime aikoina pyrkinyt pois backend/linux IoT mukavuus alueeltani ja yrittänyt oppia graafista suunnittelua.",
+      "Vaikka olen erittäin kiinnostunut teknologoista, olen vielä kiinnostuneempi tekemään ohjelmistoja joita ihmiset haluavat käyttää.",
     descriptionGreeting: "Hei vain!",
   },
   skills: {
