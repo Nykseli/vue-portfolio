@@ -102,8 +102,12 @@ const fiLocale = genLocale({
         "Full Stack kehitys: JavaSript (JQuery, ReactJs) ja Php (Laravel).",
     },
   },
+  contact: {
+    title: "Yhteystiedot",
+  },
   navigation: {
     skills: "Osaaminen",
+    contact: "Yhteystiedot",
     hobbies: "Harrastukset",
     projects: "Projektit",
     frontPage: "Etusivu",

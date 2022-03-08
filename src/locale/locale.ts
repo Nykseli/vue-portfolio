@@ -65,11 +65,16 @@ interface ExperienceLocale extends VuetifyLocale {
   item3: ExperienceLocaleItem;
 }
 
+interface ContactLocale extends VuetifyLocale {
+  title: string;
+}
+
 /**
  * Translations for navigation panel
  */
 interface NavigationLocale extends VuetifyLocale {
   skills: string;
+  contact: string;
   hobbies: string;
   projects: string;
   frontPage: string;
@@ -79,6 +84,7 @@ interface NavigationLocale extends VuetifyLocale {
 interface Locale extends VuetifyLocale {
   home: HomeLocale;
   skills: SkillsLocale;
+  contact: ContactLocale;
   hobbies: HobbiesLocale;
   projects: ProjectLocale;
   experience: ExperienceLocale;

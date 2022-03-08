@@ -102,8 +102,12 @@ const enLocale = genLocale({
         "Full Stack development: JavaScript (JQuery, ReactJs) and Php.",
     },
   },
+  contact: {
+    title: "Contact Information",
+  },
   navigation: {
     skills: "Skills",
+    contact: "Contact",
     hobbies: "Hobbies",
     projects: "Projects",
     frontPage: "Frontpage",

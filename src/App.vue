@@ -52,6 +52,16 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item link @click="routerPush('/contact')">
+          <v-list-item-action>
+            <v-icon color="secondary">mdi-account-box-outline</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title class="primary--text nav-text">
+              {{ this.$vuetify.lang.t("$vuetify.navigation.contact") }}
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
