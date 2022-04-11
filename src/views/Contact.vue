@@ -11,11 +11,6 @@
       link="https://github.com/Nykseli"
     />
     <contact-item
-      icon="mdi-linkedin"
-      name="LinkedIn"
-      link="https://www.linkedin.com/in/miika-alikirri-90aaba233/"
-    />
-    <contact-item
       icon="mdi-email"
       name="hi@miikaalikirri.fi"
       link="mailto:hi@miikaalikirri.fi"
