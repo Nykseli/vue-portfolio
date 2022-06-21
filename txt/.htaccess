@@ -1,0 +1,4 @@
+# The html files in txt are always plain text files with utf8
+<FilesMatch "\.html$">
+    Header set content-type: text/plain; charset=utf-8
+</FilesMatch>

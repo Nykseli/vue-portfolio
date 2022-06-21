@@ -30,6 +30,7 @@ jobs:
           export WDEPLOY_PASS="${{ secrets.WDEPLOY_PASS }}"
           export WDEPLOY_URL="${{ secrets.WDEPLOY_URL }}"
           export WDEPLOY_PATH="${{ secrets.WDEPLOY_PATH }}"
+          export WTEXT_DEPLOY_PATH="${{ secrets.WTEXT_DEPLOY_PATH }}"
           npm ci
           ./deploy.sh normal
 
