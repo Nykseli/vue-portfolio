@@ -176,7 +176,7 @@ export default class App extends Vue {
     const current = this.$router.currentRoute.path;
     if (current.length >= 3) {
       const lang = current.slice(1, 3);
-      if (validCodes.indexOf(lang) !== -1) {
+      if (validCodes.indexOf(lang as Languages) !== -1) {
         path = `/${lang}${path}`;
       }
     }
