@@ -1,4 +1,5 @@
-import { fi } from "vuetify/src/locale";
+/* Locale imports are causing porblems when importing from scripts so disable them for now */
+/* import { fi } from "vuetify/src/locale"; */
 import { genLocale } from "./locale";
 
 const fiLocale = genLocale({
@@ -116,6 +117,6 @@ const fiLocale = genLocale({
 });
 
 export default {
-  ...fi,
+  /*   ...fi, */
   ...fiLocale,
 };

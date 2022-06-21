@@ -1,5 +1,146 @@
 import { VuetifyLocale } from "vuetify/types/services/lang";
 
+//TODO: Should these be in order of relevance?
+// Icon names can be found in https://devicon.dev/
+export const technologies = [
+  {
+    name: "Android",
+    icon: "devicon-android-plain",
+  },
+  {
+    name: "Babel",
+    icon: "devicon-babel-plain",
+  },
+  {
+    name: "Bash",
+    icon: "devicon-bash-plain",
+  },
+  {
+    name: "C",
+    icon: "devicon-c-plain",
+  },
+  {
+    name: "C++",
+    icon: "devicon-cplusplus-plain",
+  },
+  {
+    name: "Css",
+    icon: "devicon-css3-plain",
+  },
+  {
+    name: "Django",
+    icon: "devicon-django-plain",
+  },
+  {
+    name: "Firebase",
+    icon: "devicon-firebase-plain",
+  },
+  {
+    name: "Flutter",
+    icon: "devicon-flutter-plain",
+  },
+  {
+    name: "Gcc",
+    icon: "devicon-gcc-plain",
+  },
+  {
+    name: "Git",
+    icon: "devicon-git-plain",
+  },
+  {
+    name: "Go",
+    icon: "devicon-go-plain",
+  },
+  {
+    name: "Godot",
+    icon: "devicon-godot-plain",
+  },
+  {
+    name: "Google Cloud",
+    icon: "devicon-googlecloud-plain",
+  },
+  {
+    name: "GrahpQL",
+    icon: "devicon-graphql-plain",
+  },
+  {
+    name: "Html",
+    icon: "devicon-html5-plain",
+  },
+  {
+    name: "Java",
+    icon: "devicon-java-plain",
+  },
+  {
+    name: "JavaScript",
+    icon: "devicon-javascript-plain",
+  },
+  {
+    name: "Jest",
+    icon: "devicon-jest-plain",
+  },
+  {
+    name: "Kotlin",
+    icon: "devicon-kotlin-plain",
+  },
+  {
+    name: "Laravel",
+    icon: "devicon-laravel-plain",
+  },
+  {
+    name: "Linux",
+    icon: "devicon-linux-plain",
+  },
+  {
+    name: "Material UI",
+    icon: "devicon-materialui-plain",
+  },
+  {
+    name: "Mysql",
+    icon: "devicon-mysql-plain",
+  },
+  {
+    name: "Node JS",
+    icon: "devicon-nodejs-plain",
+  },
+  {
+    name: "Npm",
+    icon: "devicon-npm-original-wordmark",
+  },
+  {
+    name: "Php",
+    icon: "devicon-php-plain",
+  },
+  {
+    name: "Python",
+    icon: "devicon-python-plain",
+  },
+  {
+    name: "ReactJs",
+    icon: "devicon-react-plain",
+  },
+  {
+    name: "Redux",
+    icon: "devicon-redux-original",
+  },
+  {
+    name: "Rust",
+    icon: "devicon-rust-plain",
+  },
+  {
+    name: "TypeScript",
+    icon: "devicon-typescript-plain",
+  },
+  {
+    name: "VueJs",
+    icon: "devicon-vuejs-plain",
+  },
+  {
+    name: "Yarn",
+    icon: "devicon-yarn-plain",
+  },
+];
+
 /**
  * Translations for views/Home.vue
  */
@@ -81,7 +222,7 @@ interface NavigationLocale extends VuetifyLocale {
   experience: string;
 }
 
-interface Locale extends VuetifyLocale {
+export interface Locale extends VuetifyLocale {
   home: HomeLocale;
   skills: SkillsLocale;
   contact: ContactLocale;
@@ -100,7 +241,7 @@ export function genLocale(locale: Locale): Locale {
 }
 
 type Languages = "fi" | "en";
-const validCodes = ["fi", "en"];
+const validCodes: Languages[] = ["fi", "en"];
 const langMatch = `(${validCodes.join("|")})`;
 const defaultLang = "en";
 
