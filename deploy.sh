@@ -42,6 +42,7 @@ function transfer_files {
 
     echo "Transfering files."
     $TARGET_RSYNC
+    $TARGET_TEXT
     echo "Transfer done."
 }
 
