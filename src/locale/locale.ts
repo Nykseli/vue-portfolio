@@ -64,6 +64,10 @@ export const technologies = [
     icon: "devicon-graphql-plain",
   },
   {
+    name: "Haskell",
+    icon: "devicon-haskell-plain",
+  },
+  {
     name: "Html",
     icon: "devicon-html5-plain",
   },
