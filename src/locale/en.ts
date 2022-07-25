@@ -92,7 +92,7 @@ const enLocale = genLocale({
     item3: {
       title: "Full Stack / IoT developer",
       company: "Firstview",
-      duration: "2016 - 2017",
+      duration: "2017 - 2018",
       description1:
         "Responsible for maintaining and developing over 10 000 Linux and Android based digital signage IoT devices all over the world.",
       description2:

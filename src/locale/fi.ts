@@ -92,7 +92,7 @@ const fiLocale = genLocale({
     item3: {
       title: "Full Stack / IoT Devaaja",
       company: "Firstview",
-      duration: "2016 - 2017",
+      duration: "2017 - 2018",
       description1:
         "Vastuussa yli 10 000 Linux ja android pohjaisen IoT laitteen ylläpidosta ja kehityksestä.",
       description2:
