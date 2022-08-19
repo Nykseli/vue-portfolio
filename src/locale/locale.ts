@@ -128,6 +128,14 @@ export const technologies = [
     icon: "devicon-redux-original",
   },
   {
+    name: "Ruby",
+    icon: "devicon-ruby-plain",
+  },
+  {
+    name: "Ruby on Rails",
+    icon: "devicon-rails-plain",
+  },
+  {
     name: "Rust",
     icon: "devicon-rust-plain",
   },
