@@ -64,6 +64,17 @@ const enLocale = genLocale({
     title: "WORK EXPERIENCE",
     item1: {
       title: "Software Developer",
+      company: "Vincit Oy",
+      duration: "2022/08 - 2023/02",
+      description1:
+        "Maintained multiple fullstack projects with varying techonlogies such as AWS, TypeScript, Django, Groovy and Ruby on Rails.",
+      description2: "Helped/mentored Trainee and Junior developers.",
+      description3: "Learned the basics of AWS.",
+      description4: 'Gave a talk about "Sustainable Web Development with Rust"',
+      description5: "",
+    },
+    item2: {
+      title: "Software Developer",
       company: "Sofokus Oy",
       duration: "2021/08 - 2022/02",
       description1:
@@ -76,7 +87,7 @@ const enLocale = genLocale({
       description5:
         "Helped the company to define guideliness for developers, so the company could have more unified way of doing things.",
     },
-    item2: {
+    item3: {
       title: "Freelancer / Student",
       company: "",
       duration: "2018 - 2021",
@@ -89,7 +100,7 @@ const enLocale = genLocale({
         "Focusing on improving my customer relation and graphical desing skills and making better software for everyone.",
       description5: "",
     },
-    item3: {
+    item4: {
       title: "Full Stack / IoT developer",
       company: "Firstview",
       duration: "2017 - 2018",

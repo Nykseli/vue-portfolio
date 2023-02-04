@@ -216,6 +216,7 @@ interface ExperienceLocale extends VuetifyLocale {
   item1: ExperienceLocaleItem;
   item2: ExperienceLocaleItem;
   item3: ExperienceLocaleItem;
+  item4: ExperienceLocaleItem;
 }
 
 interface ContactLocale extends VuetifyLocale {

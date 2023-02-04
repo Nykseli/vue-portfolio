@@ -64,6 +64,18 @@ const fiLocale = genLocale({
     title: "TYÖKOKEMUS",
     item1: {
       title: "Software Developer",
+      company: "Vincit Oy",
+      duration: "2022/08 - 2023/02",
+      description1:
+        "Ylläpidin useita Fullstack projekteja monella eri teknologialla kuten AWS, TypeScript, Django, Groovy ja Ruby on Rails.",
+      description2: "Aution/mentoroin Trainee ja Junior devaajia.",
+      description3: "Opettelin AWS:n persusteet.",
+      description4:
+        'Pidin puheen aiheesta: "Sustainable Web Development with Rust"',
+      description5: "",
+    },
+    item2: {
+      title: "Software Developer",
       company: "Sofokus Oy",
       duration: "2021/08 - 2022/02",
       description1:
@@ -76,7 +88,7 @@ const fiLocale = genLocale({
       description5:
         "Autoin yritystä määrittelemään ohjeita kehittäjille, jotta yrityksellä olisi yhtenäisempi tapa toimia.",
     },
-    item2: {
+    item3: {
       title: "Freelanseri / Opiskelija",
       company: "",
       duration: "2018 - nyt",
@@ -89,7 +101,7 @@ const fiLocale = genLocale({
         "Keskittynyt parantamaan asiakaskontakti ja graafisen suunnitelun taitoja sekä tekemään parempia ohjelmisoja kaikille.",
       description5: "",
     },
-    item3: {
+    item4: {
       title: "Full Stack / IoT Devaaja",
       company: "Firstview",
       duration: "2017 - 2018",
