@@ -28,6 +28,14 @@ const fiLocale = genLocale({
   projects: {
     technology: "Teknologiat",
     item1: {
+      title: "Graaffinen Teksti-Tv",
+      image: "/images/teletext-gui.jpg",
+      link: "https://github.com/Nykseli/teletext-gui",
+      technology: "Rust egui",
+      description:
+        "Rustilla ja egui-kirjastolla toteutettu graaffinen tekstitv applikaatio windowsille ja linuxille.",
+    },
+    item2: {
       title: "VueJs portfolio",
       image: "/images/website.jpg",
       link: "https://github.com/Nykseli/vue-portfolio",
@@ -35,7 +43,7 @@ const fiLocale = genLocale({
       description:
         "VueJs:llä toteutettu nettisivu, TypeScript:iä ja Vietify -kirjastoa hyödyntäen. Animaatiot ovat minun piirtämiä ja animoimia!",
     },
-    item2: {
+    item3: {
       title: "Yle Teksti-tv",
       image: "/images/teksti-tv.png",
       link: "https://github.com/Nykseli/yle-tekstitv",
@@ -43,7 +51,7 @@ const fiLocale = genLocale({
       description:
         "Yksinkertainen terminaali applikaatio Ylen tekstipohjaisen teksti-tv:n lukemiseen.",
     },
-    item3: {
+    item4: {
       title: "Media Controller Server",
       image: "/images/media-controller.png",
       link: "https://github.com/Nykseli/media-controller-server",
@@ -51,7 +59,7 @@ const fiLocale = genLocale({
       description:
         "Linux applikaatio media sisällön ja laitteeen ohjaamiseen. Tällä voi muunmuassa katsoa videoita VLC soittimella tai ohjata Netflix nettisivua.",
     },
-    item4: {
+    item5: {
       title: "Media Controller Client",
       image: "/images/media-client.png",
       link: "https://github.com/Nykseli/android-media-controller",

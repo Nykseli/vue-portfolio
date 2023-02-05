@@ -28,6 +28,14 @@ const enLocale = genLocale({
   projects: {
     technology: "Technologies",
     item1: {
+      title: "Graphical teletext reader",
+      image: "/images/teletext-gui.jpg",
+      link: "https://github.com/Nykseli/teletext-gui",
+      technology: "Rust egui",
+      description:
+        "Graphical teletext application for linux and windows, made with Rust and egui.",
+    },
+    item2: {
       title: "VueJs portfolio",
       image: "/images/website.jpg",
       link: "https://github.com/Nykseli/vue-portfolio",
@@ -35,7 +43,7 @@ const enLocale = genLocale({
       description:
         "VueJs website with TypeScript and Vuetify. Animations are drawn and animated by me!",
     },
-    item2: {
+    item3: {
       title: "Yle Teksti-tv",
       image: "/images/teksti-tv.png",
       link: "https://github.com/Nykseli/yle-tekstitv",
@@ -43,7 +51,7 @@ const enLocale = genLocale({
       description:
         "Simple terminal application for reading text based Yle teletext.",
     },
-    item3: {
+    item4: {
       title: "Media Controller Server",
       image: "/images/media-controller.png",
       link: "https://github.com/Nykseli/media-controller-server",
@@ -51,7 +59,7 @@ const enLocale = genLocale({
       description:
         "Linux application for controlling media content and the target device. You can for example play vidoes with vlc or control netflix website with it.",
     },
-    item4: {
+    item5: {
       title: "Media Controller Client",
       image: "/images/media-client.png",
       link: "https://github.com/Nykseli/android-media-controller",

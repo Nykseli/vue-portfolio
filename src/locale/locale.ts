@@ -198,6 +198,7 @@ interface ProjectLocale extends VuetifyLocale {
   item2: ProjectLocaleItem;
   item3: ProjectLocaleItem;
   item4: ProjectLocaleItem;
+  item5: ProjectLocaleItem;
 }
 
 interface ExperienceLocaleItem extends VuetifyLocale {
