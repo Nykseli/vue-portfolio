@@ -46,12 +46,26 @@ function transfer_files {
     echo "Transfer done."
 }
 
+function build_teletext {
+    cd projects/teletext-gui
+    export TELETEXT_PROXY_URL="https://miikaalikirri.fi/viewer/tele-api"
+    trunk build --release --public-url="viewer/tele-api"
+    cd ../..
+    mkdir -p dist/viewer/teletext
+    cp projects/teletext-gui/dist/* dist/viewer/teletext
+
+    # We also need the proxy
+    mkdir -p dist/viewer/tele-api
+    cp projects/tele-api/* dist/viewer/tele-api
+}
+
 function normal_transfer {
     npm run build
     npx tsc scripts/gen-text-site.ts && node scripts/gen-text-site.js
     cd txt
     ln -s en.html index.html
     cd ..
+    build_teletext
     transfer_files
 }
 

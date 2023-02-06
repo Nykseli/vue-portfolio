@@ -1,0 +1,3 @@
+[submodule "projects/teletext-gui"]
+	path = projects/teletext-gui
+	url = https://github.com/Nykseli/teletext-gui
