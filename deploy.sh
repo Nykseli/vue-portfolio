@@ -49,7 +49,7 @@ function transfer_files {
 function build_teletext {
     cd projects/teletext-gui
     export TELETEXT_PROXY_URL="https://miikaalikirri.fi/viewer/tele-api"
-    trunk build --release --public-url="viewer/tele-api"
+    trunk build --release --public-url="viewer/teletext"
     cd ../..
     mkdir -p dist/viewer/teletext
     cp projects/teletext-gui/dist/* dist/viewer/teletext
