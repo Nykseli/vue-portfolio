@@ -160,7 +160,7 @@ const genExperienceContent = (locale: Locale): string => {
   const itemKeys = Object.keys(local).filter(key => key.startsWith('item')).sort();
   const items = itemKeys.map(key => local[key] as Locale['experience']['item1'])
   const exp = items.map(it => {
-    const top = `---\n${it.title} (${it.duration})\n`
+    const top = `---${it.company ? '\n' + it.company : ''}\n${it.title} (${it.duration})\n`
     const descKeys = Object.keys(it).filter(key => key.startsWith('desc')).sort();
     // desciptions might be empty so filter those out
     const descFilt = descKeys.filter(key => it[key])
