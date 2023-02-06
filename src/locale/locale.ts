@@ -186,6 +186,7 @@ interface HobbiesLocale extends VuetifyLocale {
  */
 export interface ProjectLocaleItem extends VuetifyLocale {
   link: string;
+  link2: string;
   image: string;
   title: string;
   technology: string;

@@ -15,6 +15,14 @@
           <a :href="item.link" target="_blank" rel="noopener noreferrer">
             <p class="secondary--text">{{ item.link }}</p>
           </a>
+          <a
+            v-if="item.link2"
+            :href="item.link2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p class="secondary--text second-item-link">{{ item.link2 }}</p>
+          </a>
         </v-card-text>
       </v-card>
     </div>
@@ -39,6 +47,7 @@ export default class Projects extends Vue {
   private item(item: string): ProjectLocaleItem {
     return {
       link: this.tl(item, "link"),
+      link2: this.tl(item, "link2"),
       image: this.tl(item, "image"),
       title: this.tl(item, "title"),
       // TODO: should technologies have links and/or logos?
@@ -83,6 +92,10 @@ export default class Projects extends Vue {
 .info-project-item > h3 {
   font-size: 18px;
   padding-bottom: 10px;
+}
+
+.second-item-link {
+  margin-top: -8px;
 }
 
 p {

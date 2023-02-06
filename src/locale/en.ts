@@ -30,7 +30,8 @@ const enLocale = genLocale({
     item1: {
       title: "Graphical teletext reader",
       image: "/images/teletext-gui.jpg",
-      link: "https://github.com/Nykseli/teletext-gui",
+      link: "https://miikaalikirri.fi/viewer/teletext/",
+      link2: "https://github.com/Nykseli/teletext-gui",
       technology: "Rust egui",
       description:
         "Graphical teletext application for linux and windows, made with Rust and egui.",
@@ -39,6 +40,7 @@ const enLocale = genLocale({
       title: "VueJs portfolio",
       image: "/images/website.jpg",
       link: "https://github.com/Nykseli/vue-portfolio",
+      link2: "",
       technology: "TypeScript VueJs Vuetify",
       description:
         "VueJs website with TypeScript and Vuetify. Animations are drawn and animated by me!",
@@ -47,6 +49,7 @@ const enLocale = genLocale({
       title: "Yle Teksti-tv",
       image: "/images/teksti-tv.png",
       link: "https://github.com/Nykseli/yle-tekstitv",
+      link2: "",
       technology: "C ncurses",
       description:
         "Simple terminal application for reading text based Yle teletext.",
@@ -55,6 +58,7 @@ const enLocale = genLocale({
       title: "Media Controller Server",
       image: "/images/media-controller.png",
       link: "https://github.com/Nykseli/media-controller-server",
+      link2: "",
       technology: "Python Linux",
       description:
         "Linux application for controlling media content and the target device. You can for example play vidoes with vlc or control netflix website with it.",
@@ -63,6 +67,7 @@ const enLocale = genLocale({
       title: "Media Controller Client",
       image: "/images/media-client.png",
       link: "https://github.com/Nykseli/android-media-controller",
+      link2: "",
       technology: "Android Java",
       description:
         "Android client application for controlling the media server",
