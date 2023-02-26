@@ -32,6 +32,7 @@ const fiLocale = genLocale({
       image: "/images/teletext-gui.jpg",
       link: "https://miikaalikirri.fi/viewer/teletext/",
       link2: "https://github.com/Nykseli/teletext-gui",
+      link3: "",
       technology: "Rust egui",
       description:
         "Rustilla ja egui-kirjastolla toteutettu graaffinen tekstitv applikaatio windowsille ja linuxille.",
@@ -40,16 +41,18 @@ const fiLocale = genLocale({
       title: "VueJs portfolio",
       image: "/images/website.jpg",
       link: "https://github.com/Nykseli/vue-portfolio",
-      link2: "",
+      link2: "https://github.com/Nykseli/site-reader",
+      link3: "https://txt.miikaalikirri.fi/fi.html",
       technology: "TypeScript VueJs Vuetify",
       description:
-        "VueJs:llä toteutettu nettisivu, TypeScript:iä ja Vietify -kirjastoa hyödyntäen. Animaatiot ovat minun piirtämiä ja animoimia!",
+        "VueJs:llä toteutettu nettisivu, TypeScript:iä ja Vietify -kirjastoa hyödyntäen. Animaatiot ovat minun piirtämiä ja animoimia! Sivusta on myös yksinkertainen teksti-versio jota pystyy lukemaan jopa assemblylla kirjoitetulla ohjelmalla.",
     },
     item3: {
       title: "Yle Teksti-tv",
       image: "/images/teksti-tv.png",
       link: "https://github.com/Nykseli/yle-tekstitv",
       link2: "",
+      link3: "",
       technology: "C ncurses",
       description:
         "Yksinkertainen terminaali applikaatio Ylen tekstipohjaisen teksti-tv:n lukemiseen.",
@@ -59,6 +62,7 @@ const fiLocale = genLocale({
       image: "/images/media-controller.png",
       link: "https://github.com/Nykseli/media-controller-server",
       link2: "",
+      link3: "",
       technology: "Python Linux",
       description:
         "Linux applikaatio media sisällön ja laitteeen ohjaamiseen. Tällä voi muunmuassa katsoa videoita VLC soittimella tai ohjata Netflix nettisivua.",
@@ -68,6 +72,7 @@ const fiLocale = genLocale({
       image: "/images/media-client.png",
       link: "https://github.com/Nykseli/android-media-controller",
       link2: "",
+      link3: "",
       technology: "Android Java",
       description:
         "Android pohjainen asiakasohjelma media serverin ohjaamiseen.",

@@ -23,6 +23,14 @@
           >
             <p class="secondary--text second-item-link">{{ item.link2 }}</p>
           </a>
+          <a
+            v-if="item.link3"
+            :href="item.link3"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p class="secondary--text second-item-link">{{ item.link3 }}</p>
+          </a>
         </v-card-text>
       </v-card>
     </div>
@@ -48,6 +56,7 @@ export default class Projects extends Vue {
     return {
       link: this.tl(item, "link"),
       link2: this.tl(item, "link2"),
+      link3: this.tl(item, "link3"),
       image: this.tl(item, "image"),
       title: this.tl(item, "title"),
       // TODO: should technologies have links and/or logos?
