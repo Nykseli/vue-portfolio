@@ -1,16 +1,14 @@
 /**
  * Generate text-only pages in all languages.
  *
- * Site structure. Note that other langauges might be addded later
+ * Site structure. Note that other langauges might be added later
  *
  * Actual files:
- * /en/index.html
- * /fi/index.html
+ * /fi.html
+ * /en.html
  *
  * Symlinks:
- * /index.html -> en/index.html
- * /fi.html -> /fi/index.html
- * /en.html -> /en/index.html
+ * /index.html -> /en.html
  */
 
 import * as fs from 'fs'
@@ -20,7 +18,6 @@ import fi from "../src/locale/fi";
 import en from "../src/locale/en";
 import {
   validCodes,
-  defaultLang,
   Locale,
   Languages,
   technologies
@@ -28,6 +25,7 @@ import {
 
 interface LocaleConents {
   home: string;
+  talks: string;
   skills: string;
   contact: string;
   hobbies: string;
@@ -111,6 +109,14 @@ const limitLineWidth = (line: string, list: boolean = false): string => {
   return lines.join('\n');
 }
 
+const localLink = (link: string): string => {
+  if (link.startsWith('/')) {
+    return `https://miikaalikirri.fi${link}`;
+  }
+
+  return link;
+}
+
 const genHomeContent = (locale: Locale): string => {
   const local = locale.home
   // TODO: create a function to turn locale into text
@@ -121,6 +127,19 @@ const genHomeContent = (locale: Locale): string => {
   descKeys = [descKeys.pop() as string, ...descKeys];
   const description = descKeys.map(key => limitLineWidth(local[key] as string)).join('\n');
   return `MIIKA ALIKIRRI\n${TITLE_LINE}\n\n${typer}\n\n${description}`;
+}
+
+const genTalksContent = (locale: Locale): string => {
+  const local = locale.talks
+  const introduction = limitLineWidth(local.introduction);
+  const talkKeys = Object.keys(local).filter(key => key.startsWith('talk')).sort();
+  const talks = talkKeys.map(key => local[key] as Locale['talks']['talk1'])
+  const talkTxt = talks.map(it => {
+    const info = `${it.title}\n\n${limitLineWidth(it.description)}`
+    const link = `${it.link_description}:\n${localLink(it.link)}`;
+    return `---\n${info}\n\n${link}\n---`
+  }).join('\n\n');
+  return `${locale.navigation.talks}\n${TITLE_LINE}\n\n${introduction}\n\n${talkTxt}`;
 }
 
 const genSkillsContent = (locale: Locale): string => {
@@ -173,6 +192,7 @@ const genExperienceContent = (locale: Locale): string => {
 const genLocalConents = (locale: Locale): LocaleConents => {
   return {
     home: genHomeContent(locale),
+    talks: genTalksContent(locale),
     skills: genSkillsContent(locale),
     contact: genContactContent(locale),
     hobbies: genHobbiesContent(locale),
@@ -190,7 +210,7 @@ In english: /en.html
 `
 
   let content = `${sites}\n${c.home}\n\n${c.experience}\n\n${c.projects}\n\n`
-  content = `${content}${c.hobbies}\n\n${c.skills}\n\n${c.contact}\n\n`
+  content = `${content}${c.hobbies}\n\n${c.skills}\n\n${c.talks}\n\n${c.contact}\n\n`
 
   return {
     language,
