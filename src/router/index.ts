@@ -6,6 +6,7 @@ import Projects from "@/views/Projects.vue";
 import Hobbies from "@/views/Hobbies.vue";
 import Skills from "@/views/Skills.vue";
 import Contact from "@/views/Contact.vue";
+import Talks from "@/views/Talks.vue";
 import ViewContainer from "@/views/ViewContainer.vue";
 import { langMatch } from "@/locale/locale";
 
@@ -40,6 +41,11 @@ const routes: Array<RouteConfig> = [
         path: "projects",
         name: "Projects",
         component: Projects,
+      },
+      {
+        path: "Talks",
+        name: "Talks",
+        component: Talks,
       },
       {
         path: "contact",

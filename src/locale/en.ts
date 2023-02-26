@@ -127,10 +127,24 @@ const enLocale = genLocale({
         "Full Stack development: JavaScript (JQuery, ReactJs) and Php.",
     },
   },
+  talks: {
+    title: "Talks",
+    introduction:
+      "So far I've had only one opportunity to give a programming related talk and it's something I would like to do more in the future. It's really rewarding to teach others about the technologies I'm personally a fan of.",
+    talk1: {
+      title: "Sustainable Web Development With Rust",
+      description:
+        "In this talk, I talked about how Rust can be used in web development to create sustainable software. Sustainable meaning code that's efficient to develop and maintain, and that uses as few resources as possible to make it environmentally friendly.",
+      link: "/talks/Sustainable_Web_Development_With_Rust.pdf",
+      link_description: "Talk Pdf (in English)",
+      image: "/images/rust-webdev-talk.jpg",
+    },
+  },
   contact: {
     title: "Contact Information",
   },
   navigation: {
+    talks: "Talks",
     skills: "Skills",
     contact: "Contact",
     hobbies: "Hobbies",

@@ -225,10 +225,25 @@ interface ContactLocale extends VuetifyLocale {
   title: string;
 }
 
+export interface TalksLocaleItem extends VuetifyLocale {
+  title: string;
+  description: string;
+  link: string;
+  link_description: string;
+  image: string;
+}
+
+interface TalksLocale extends VuetifyLocale {
+  title: string;
+  introduction: string;
+  talk1: TalksLocaleItem;
+}
+
 /**
  * Translations for navigation panel
  */
 interface NavigationLocale extends VuetifyLocale {
+  talks: string;
   skills: string;
   contact: string;
   hobbies: string;
@@ -239,6 +254,7 @@ interface NavigationLocale extends VuetifyLocale {
 
 export interface Locale extends VuetifyLocale {
   home: HomeLocale;
+  talks: TalksLocale;
   skills: SkillsLocale;
   contact: ContactLocale;
   hobbies: HobbiesLocale;

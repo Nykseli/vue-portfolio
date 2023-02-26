@@ -128,10 +128,24 @@ const fiLocale = genLocale({
         "Full Stack kehitys: JavaSript (JQuery, ReactJs) ja Php (Laravel).",
     },
   },
+  talks: {
+    title: "Puheet",
+    introduction:
+      "Toistaiseksi minulla on ollut vain yksi tilaisuus pitää ohjelmointiin liittyvä puhe, ja haluaisin tehdä sitä enemmänkin tulevaisuudessa. On todella palkitsevaa opettaa muille teknologioista joista itse olen innostunut.",
+    talk1: {
+      title: "Kestävää web kehitystä Rustin avulla",
+      description:
+        "Tässä puheessa kerroin, miten Rustia voidaan käyttää web kehityksessä kestävien ohjelmistojen luomiseen. Kestävällä tarkoittetaan koodia, jota on tehokasta kehittää ja ylläpitää ja joka käyttää mahdollisimman vähän resursseja, jotta se olisi ympäristöystävällistä.",
+      link: "/talks/Sustainable_Web_Development_With_Rust.pdf",
+      link_description: "Puheen PDF (Englanniksi)",
+      image: "/images/rust-webdev-talk.jpg",
+    },
+  },
   contact: {
     title: "Yhteystiedot",
   },
   navigation: {
+    talks: "Puheet",
     skills: "Osaaminen",
     contact: "Yhteystiedot",
     hobbies: "Harrastukset",
