@@ -169,7 +169,9 @@ const genProjectContent = (locale: Locale): string => {
   const items = itemKeys.map(key => local[key] as Locale['projects']['item1'])
   const tech = items.map(it => {
     const top = `---\n${it.title}\n${limitLineWidth(it.description)}\n\n`
-    return `${top}${it.technology}\n${it.link}\n${it.link2 ? it.link2 + '\n' : ''}---`
+    const linkKeys = Object.keys(it).filter(key => key.startsWith('link') && it[key]).sort();
+    const links = limitLineWidth(linkKeys.map(key => it[key]).join('\n'));
+    return `${top}${it.technology}\n${links}\n---`
   }).join('\n\n');
   return `${locale.navigation.projects}\n${TITLE_LINE}\n\n${tech}`;
 }
