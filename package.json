@@ -6,10 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "gen-md": "tsc scripts/gen-markdown.ts && node scripts/gen-markdown.js",
+    "gen-pdf": "npm run gen-md && npx md-to-pdf --config-file md-to-pdf.config.js pdf/*.md",
     "gen-txt": "tsc scripts/gen-text-site.ts && node scripts/gen-text-site.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "md-to-pdf": "^5.2.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^9.1.2",

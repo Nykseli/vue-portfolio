@@ -28,3 +28,7 @@ scripts/*.js
 
 # The generated plain text files
 txt/**/*.html
+
+# Generated md and pdf files
+pdf/*.md
+pdf/*.pdf
