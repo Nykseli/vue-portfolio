@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown until 17th of April 10 am GMT+3</title>
+</head>
+
+<body>
+  <!-- Display the countdown timer in an element -->
+  <h2>Time until start</h2>
+  <p id="countdown"></p>
+
+  <script>
+    const utcOffset = 8;
+
+    function dist(a, b) {
+      return a - b;
+    }
+
+
+    function timefmt(days, hours, minutes, seconds) {
+      let res = "";
+      //if (days)
+      res = `${new String(days).padStart(2, "0")}d`;
+      //if (hours)
+      res = `${res}:${new String(hours).padStart(2, "0")}h`;
+      //if (minutes)
+      res = `${res}:${new String(minutes).padStart(2, "0")}m`;
+      //if (seconds)
+      res = `${res}:${new String(seconds).padStart(2, "0")}s`;
+
+      return res;
+    }
+
+    const countDownDate = new Date(2023, 3, 17, 10).getTime()
+
+    const x = setInterval(function () {
+
+      const now = new Date().getTime()
+
+      // Find the distance between now and the count down date
+      const distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the result in the element with id="countdown"
+      document.getElementById("countdown").innerText = timefmt(days, hours, minutes, seconds)
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerText = "It has started!";
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
