@@ -57,6 +57,9 @@ function build_teletext {
     # We also need the proxy
     mkdir -p dist/viewer/tele-api
     cp projects/tele-api/* dist/viewer/tele-api
+
+    mkdir -p dist/viewer/countdown
+    cp projects/countdown/* dist/viewer/countdown
 }
 
 function normal_transfer {
