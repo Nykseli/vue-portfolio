@@ -41,4 +41,17 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Allow-Headers: X-Requested-With");
 
-echo file_get_contents($user_url);
+// Yle has becoming picky about headers so fake curl headers
+$opts = [
+  "http" => [
+      "method" => "GET",
+      "header" => "Host: yle.fi\r\n" .
+                  "user-agent: curl/7.81.0\r\n" .
+                  "accept: */*\r\n"
+  ]
+];
+
+// DOCS: https://www.php.net/manual/en/function.stream-context-create.php
+$context = stream_context_create($opts);
+
+echo file_get_contents($user_url, false, $context);
